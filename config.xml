@@ -16,9 +16,12 @@
         Armoured Guinea Pig Developement
     </author>
 	
-	<gap:platform name="android" />
-	
-	<icon src="icon.png" />
+	<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		<activity android:name="org.GPD.shouldIRun" android:label="@string/ShouldIRun">
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		</activity>
+	</config-file>
 	
 	<gap:plugin name="org.apache.cordova.geolocation" version="0.3.2" />
  
