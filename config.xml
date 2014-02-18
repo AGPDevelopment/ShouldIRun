@@ -16,7 +16,7 @@
         Armoured Guinea Pig Developement
     </author>
 	
-	<icon src="img/icon.png" />
+	<icon src="icon.png" />
 	
 	<config-file target="AndroidManifest.xml" parent="/manifest/application">
 		<activity android:name="org.GPD.shouldIRun" android:label="@string/ShouldIRun">
