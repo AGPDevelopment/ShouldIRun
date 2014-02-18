@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns       = "http://www.w3.org/ns/widgets"
-        xmlns:gap   = "http://phonegap.com/ns/1.0"
+<widget xmlns       	= "http://www.w3.org/ns/widgets"
+        xmlns:gap   	= "http://phonegap.com/ns/1.0"
 		xmlns:android   = "http://schemas.android.com/apk/res/android"
-        id          = "org.GPD.shouldIRun"
-        versionCode = "10"
-        version     = "1.1.0">
+        id          	= "org.GPD.shouldIRun"
+        versionCode 	= "10"
+        version    		= "1.1.0">
  
     <name>ShouldIRun</name>
  
@@ -16,8 +16,12 @@
         Armoured Guinea Pig Developement
     </author>
 	
-	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		<activity android:name="org.GPD.shouldIRun" android:label="@string/ShouldIRun">
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		</activity>
+	</config-file>
  
     <feature name="http://api.phonegap.com/1.0/camera"/>
     <feature name="http://api.phonegap.com/1.0/contacts"/>
