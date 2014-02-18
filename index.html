@@ -1,39 +1,45 @@
+<!DOCTYPE html>
 <html>
-	<head>
-    </head>
-    <body>
-    	<div id="location_holder">
-        </div>
-    	<script src="phonegap.js"></script>
-        <script src="js/jquery-1.11.0.min.js"></script>
-        <script src="js/jquery.mobile-1.4.0.min.js"></script>
-        <script>
-			document.addEventListener("deviceready", onDeviceReady, false);
+  <head>
+    <title>Device Properties Example</title>
 
-			function onDeviceReady() {
-				navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 300000, timeout:10000, enableHighAccuracy : true});
-			};
-			// onSuccess Callback
-			// This method accepts a Position object, which contains the
-			// current GPS coordinates
-			//
-			var onSuccess = function(position) {
-				alert('Latitude: '          + position.coords.latitude          + '\n' +
-					  'Longitude: '         + position.coords.longitude         + '\n' +
-					  'Altitude: '          + position.coords.altitude          + '\n' +
-					  'Accuracy: '          + position.coords.accuracy          + '\n' +
-					  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-					  'Heading: '           + position.coords.heading           + '\n' +
-					  'Speed: '             + position.coords.speed             + '\n' +
-					  'Timestamp: '         + position.timestamp                + '\n');
-			};
-			
-			// onError Callback receives a PositionError object
-			//
-			function onError(error) {
-				alert('code: '    + error.code    + '\n' +
-					  'message: ' + error.message + '\n');
-			}
-		</script>
-    </body>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Altitude: '           + position.coords.altitude              + '<br />' +
+                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
+                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+                            'Heading: '            + position.coords.heading               + '<br />' +
+                            'Speed: '              + position.coords.speed                 + '<br />' +
+                            'Timestamp: '          + position.timestamp                    + '<br />';
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    </script>
+  </head>
+  <body>
+    <p id="geolocation">Finding geolocation...</p>
+  </body>
 </html>
