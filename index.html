@@ -1,10 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Naamloos document</title>
-</head>
-
-<body>
-</body>
+<html>
+	<head>
+    </head>
+    <body>
+    	<div id="location_holder">
+        </div>
+    	<script src="phonegap.js"></script>
+        <script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/jquery.mobile-1.4.0.min.js"></script>
+        <script>
+			// onSuccess Callback
+			// This method accepts a Position object, which contains the
+			// current GPS coordinates
+			//
+			var onSuccess = function(position) {
+				alert('Latitude: '          + position.coords.latitude          + '\n' +
+					  'Longitude: '         + position.coords.longitude         + '\n' +
+					  'Altitude: '          + position.coords.altitude          + '\n' +
+					  'Accuracy: '          + position.coords.accuracy          + '\n' +
+					  'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+					  'Heading: '           + position.coords.heading           + '\n' +
+					  'Speed: '             + position.coords.speed             + '\n' +
+					  'Timestamp: '         + position.timestamp                + '\n');
+			};
+			
+			// onError Callback receives a PositionError object
+			//
+			function onError(error) {
+				alert('code: '    + error.code    + '\n' +
+					  'message: ' + error.message + '\n');
+			}
+			
+			navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		</script>
+    </body>
 </html>
