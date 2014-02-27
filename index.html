@@ -19,11 +19,11 @@
   <body>
     <p id="test"></p>
     <script>
-		getWeather(52.37,4.91);
+		getWeather(52.365826, 4.905512);
 		var weer = JSON.parse(localStorage.getItem('weer'));
 		console.log(weer);
 		console.log(weer.weather[0].main);
-		$('#test').html('het is nu '+weer.weather[0].main + ' in '+weer.name);
+		$('#test').html('het is nu '+weer.weather[0].main + ' en ' + weer.main.temp + ' graden in '+weer.name);
 		//getFutureLocation();
 	</script>
   </body>
