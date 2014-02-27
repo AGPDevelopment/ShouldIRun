@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Device Properties Example</title>
+    <title>Should I Run?</title>
 
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/location.js"></script>
     <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
-
-    // onSuccess Geolocation
-    //
-    function onSuccess(position) {
-        var element = document.getElementById('geolocation');
-        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
-                            'Longitude: '          + position.coords.longitude             + '<br />' +
-                            'Altitude: '           + position.coords.altitude              + '<br />' +
-                            'Accuracy: '           + position.coords.accuracy              + '<br />' +
-                            'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
-                            'Heading: '            + position.coords.heading               + '<br />' +
-                            'Speed: '              + position.coords.speed                 + '<br />' +
-                            'Timestamp: '          + position.timestamp                    + '<br />';
-    }
-
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
-    }
-
+		document.addEventListener("deviceready", onDeviceReady, false);
+		// PhoneGap is ready
+		//
+		function onDeviceReady() {
+			var db = window.openDatabase("weer", "1.0", "Weer", 1000000);
+		}
     </script>
   </head>
   <body>
-    <p id="geolocation">Finding geolocation...</p>
+    <p id="test"></p>
+    <script>
+		getWeather(52.37,4.91);
+		var weer = JSON.parse(localStorage.getItem('weer'));
+		console.log(weer);
+		console.log(weer.weather[0].main);
+		$('#test').html('het is nu '+weer.weather[0].main + ' in '+weer.name);
+		//getFutureLocation();
+	</script>
   </body>
 </html>
