@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Should I Run?</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
 
     <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.0.min.js"></script>
@@ -17,14 +19,196 @@
     </script>
   </head>
   <body>
-    <p id="test"></p>
-    <script>
-		getWeather(52.365826, 4.905512);
-		var weer = JSON.parse(localStorage.getItem('weer'));
-		console.log(weer);
-		console.log(weer.weather[0].main);
-		$('#test').html('het is nu '+weer.weather[0].main + ' en ' + weer.main.temp + ' graden in '+weer.name);
-		//getFutureLocation();
-	</script>
+      
+      <div data-role="page" id="index" class"ui-page">
+          <div data-role="header" class"ui-header">
+              <h1>Should-I-Run</h1>
+          </div>
+          
+          <div data-role="content" class"ui-content">
+                <a href="#welcome">Go</a>
+                <p id="test"></p>
+              <script>
+                  getWeather(52.365826, 4.905512);
+                  var weer = JSON.parse(localStorage.getItem('weer'));
+                  console.log(weer);
+                  console.log(weer.weather[0].main);
+                  $('#test').html('het is nu '+weer.weather[0].main + ' en ' + weer.main.temp + ' graden in '+weer.name);
+                  //getFutureLocation();
+              </script>
+          </div>
+          
+          <div data-role="footer" class"ui-footer">
+          
+          </div>
+        
+      </div>
+      
+      <div data-role="page" id="welcome" class"ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <p>Hi! Thank you for installing the 'Should-I-Run' app on your mobile device.</p>
+            <p>From now on you will never run late or miss your transport connection.</p>
+            <p>Pleas adjust your personal transport preferences first.</p>
+            <a href="#pref-bike">Let's go! >></a>
+        </div>
+        <div data-role="footer" class"ui-footer">
+        </div>
+      </div>
+      
+      <div data-role="page" id="pref-bike" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/bike.png">
+            <a href="#pref-car">></a>
+            <label for="flip-1">Do you have a bicycle?</label>
+            <select name="flip-1" id="flip-1" data-role="slider">
+	           <option value="off">NO</option>
+	           <option value="on">YES</option>
+            </select> 
+            </label>
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div>
+      
+      <div data-role="page" id="pref-car" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/car.png">
+            <a href="#pref-public-transport">></a>
+            <label for="flip-2">Do you have a car?</label>
+            <select name="flip-2" id="flip-2" data-role="slider">
+	           <option value="off">NO</option>
+	           <option value="on">YES</option>
+            </select> 
+            </label>
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div>
+      
+      <div data-role="page" id="pref-public-transport" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/public-transport.png">
+            <a href="#pref-walking">></a>
+            <label for="flip-3">Is public transport an option for you?</label>
+            <select name="flip-3" id="flip-3" data-role="slider">
+	           <option value="off">NO</option>
+	           <option value="on">YES</option>
+            </select> 
+            </label>
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div>    
+      
+      <div data-role="page" id="pref-walking" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/walking.png">
+            <a href="#pref-bike-rain">></a>
+            <label for="flip-4">Is walking an option for you?</label>
+            <select name="flip-4" id="flip-4" data-role="slider">
+	           <option value="off">NO</option>
+	           <option value="on">YES</option>
+            </select> 
+            </label>
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div> 
+      
+      <div data-role="page" id="pref-bike-rain" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/bike-rain.png">
+            <a href="#pref-bike-duration">></a>
+            <label for="flip-5">Do you cycle when it is raining?</label>
+            <select name="flip-5" id="flip-5" data-role="slider">
+	           <option value="off">NO</option>
+	           <option value="on">YES</option>
+            </select> 
+            </label>
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div> 
+      
+    <div data-role="page" id="pref-bike-duration" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/bike-duration.png">
+            <a href="#pref-walking-duration">></a>
+            <label for="slider-fill">Maximum cycling duration (in minutes)</label>
+            <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div> 
+      
+      <div data-role="page" id="pref-walking-duration" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/walking-duration.png">
+            <a href="#pref-reminder-duration">></a>
+            <label for="slider-fill">Maximum walking duration (in minutes)</label>
+            <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div> 
+      
+      <div data-role="page" id="pref-reminder-duration" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <img class="pref-icon" src="images/reminder-duration.png">
+            <a href="#">></a>
+            <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
+            <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div> 
+      
+      <div data-role="page" id="" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <h1>Should-I-Run</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div>
+      
   </body>
 </html>
