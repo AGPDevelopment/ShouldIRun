@@ -26,7 +26,8 @@
           </div>
           
           <div data-role="content" class"ui-content">
-                <a href="#welcome">Go</a>
+                <a href="#welcome">Go to preferences</a>
+                <a href="#main">Go to main</a>
                 <p id="test"></p>
               <script>
                   getWeather(52.365826, 4.905512);
@@ -64,7 +65,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/bike.png">
-            <a href="#pref-car">></a>
+            <a class="next" href="#pref-car">></a>
             <label for="flip-1">Do you have a bicycle?</label>
             <select name="flip-1" id="flip-1" data-role="slider">
 	           <option value="off">NO</option>
@@ -83,7 +84,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/car.png">
-            <a href="#pref-public-transport">></a>
+            <a class="next" href="#pref-public-transport">></a>
             <label for="flip-2">Do you have a car?</label>
             <select name="flip-2" id="flip-2" data-role="slider">
 	           <option value="off">NO</option>
@@ -102,7 +103,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/public-transport.png">
-            <a href="#pref-walking">></a>
+            <a class="next" href="#pref-walking">></a>
             <label for="flip-3">Is public transport an option for you?</label>
             <select name="flip-3" id="flip-3" data-role="slider">
 	           <option value="off">NO</option>
@@ -121,7 +122,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/walking.png">
-            <a href="#pref-bike-rain">></a>
+            <a class="next" href="#pref-bike-rain">></a>
             <label for="flip-4">Is walking an option for you?</label>
             <select name="flip-4" id="flip-4" data-role="slider">
 	           <option value="off">NO</option>
@@ -140,7 +141,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/bike-rain.png">
-            <a href="#pref-bike-duration">></a>
+            <a class="next" href="#pref-bike-duration">></a>
             <label for="flip-5">Do you cycle when it is raining?</label>
             <select name="flip-5" id="flip-5" data-role="slider">
 	           <option value="off">NO</option>
@@ -159,7 +160,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/bike-duration.png">
-            <a href="#pref-walking-duration">></a>
+            <a class="next" href="#pref-walking-duration">></a>
             <label for="slider-fill">Maximum cycling duration (in minutes)</label>
             <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
         </div>
@@ -174,7 +175,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/walking-duration.png">
-            <a href="#pref-reminder-duration">></a>
+            <a class="next" href="#pref-reminder-duration">></a>
             <label for="slider-fill">Maximum walking duration (in minutes)</label>
             <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
         </div>
@@ -189,7 +190,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/reminder-duration.png">
-            <a href="#">></a>
+            <a class="next" href="#main">></a>
             <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
             <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
         </div>
@@ -198,6 +199,36 @@
         </div>
       </div> 
       
+      <div data-role="page" id="main" class="ui-page">
+        <div data-role="header" class"ui-header">
+            <a href="#"><img class="preferences-icon" src="images/preferences.png"></a>
+        </div>
+        <div data-role="content" class"ui-content">
+            
+        </div>
+        <div data-role="footer" class"ui-footer">
+            <div class="footer-icon1">
+                <a href="#"><img class="f-icon" src="images/schedule.png"></a>
+            </div>
+            <div class="footer-icon2">
+                <a href="#"><img class="f-icon" src="images/confirm.png"></a>
+            </div>
+        </div>
+      </div>
+
+      <div data-role="page" id="preferences" class="ui-page">
+        <div data-role="header" class"ui-header">
+            
+        </div>
+        <div data-role="content" class"ui-content">
+            
+        </div>
+        <div data-role="footer" class"ui-footer">
+            
+        </div>
+      </div>
+
+
       <div data-role="page" id="" class="ui-page">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>

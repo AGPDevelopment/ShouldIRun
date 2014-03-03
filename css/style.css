@@ -23,10 +23,42 @@
     padding: 0;
 }
 
+.preferences-icon {
+    display: block;
+    float: right;
+}
+
 .ui-content, label {
     font-size: 1.6rem !important;
     font-size: 16px !important;  
     font-weight: normal;
+}
+
+.ui-footer {
+    background: #edefee;
+    position:fixed;
+    bottom: 0px;
+    height: 112px;
+    width: 100%;
+    display: block;
+}
+
+.footer-icon1 {
+    width: 50%;
+    float: left;
+    border-right: 1px solid #27bb9f;
+}
+
+.footer-icon2 {
+    width: 48%;
+    float: left;
+}
+
+.f-icon {
+    width: 30%;  
+    padding: 20px;
+    margin: 0 auto;
+    display: block;
 }
 
 #welcome, #welcome h1 {
@@ -68,5 +100,11 @@
 .pref-icon {
     width: 80%;
     padding: 40px 0;
+}
+
+.next, .next:hover {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
 }
 
