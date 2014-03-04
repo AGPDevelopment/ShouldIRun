@@ -17,6 +17,28 @@
 			var db = window.openDatabase("weer", "1.0", "Weer", 1000000);
 		}
     </script>
+      
+    <script>
+      var db = window.openDatabase("preferences", "", "Preferences app", 1024*1000);
+        
+      function insertScore(bike, car, publicTransport, walking, bikeRain, bikeDuration, walkingDuration, reminderDuration) {
+       db.transaction(function(tx) {
+          tx.executeSql('INSERT INTO Strokes (id, bike, car, publictransport, walking, bikerain, bikeduration, walkingduration, reminderduration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', [1, bike, car, publicTransport, walking, bikeRain, bikeDruation, walkingDuration, reminderDuration]);
+       });
+      }
+        
+        
+      $(document).ready(function() {
+        db.transaction(function(tx) {
+          tx.executeSql('CREATE TABLE IF NOT EXISTS Preferences(id INTEGER PRIMARY KEY, bike BOOLEAN, car BOOLEAN, publictransport BOOLEAN, walking BOOLEAN, bikerain BOOLEAN, bikeduration INTEGER, walkingduration INTEGER, reminderduration INTEGER)', []);
+        });
+          
+        $('#preferences').submit(function() {
+            insertScore(1, $('#flip-1').val(), $('#flip-2').val(), $('#flip-3').val(), $('#flip-4').val(), $('#flip-5').val(), $('#slider-fill1').val(), $('#slider-fill2').val(), $('#slider-fill3').val());
+          }
+          
+      });
+    </script>
   </head>
   <body>
       
@@ -45,7 +67,7 @@
         
       </div>
       
-      <div data-role="page" id="welcome" class"ui-page">
+      <div data-role="page" id="welcome" class"ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -59,7 +81,7 @@
         </div>
       </div>
       
-      <div data-role="page" id="pref-bike" class="ui-page">
+      <div data-role="page" id="pref-bike" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -78,7 +100,7 @@
         </div>
       </div>
       
-      <div data-role="page" id="pref-car" class="ui-page">
+      <div data-role="page" id="pref-car" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -97,7 +119,7 @@
         </div>
       </div>
       
-      <div data-role="page" id="pref-public-transport" class="ui-page">
+      <div data-role="page" id="pref-public-transport" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -116,7 +138,7 @@
         </div>
       </div>    
       
-      <div data-role="page" id="pref-walking" class="ui-page">
+      <div data-role="page" id="pref-walking" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -135,7 +157,7 @@
         </div>
       </div> 
       
-      <div data-role="page" id="pref-bike-rain" class="ui-page">
+      <div data-role="page" id="pref-bike-rain" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -154,7 +176,7 @@
         </div>
       </div> 
       
-    <div data-role="page" id="pref-bike-duration" class="ui-page">
+    <div data-role="page" id="pref-bike-duration" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -162,14 +184,14 @@
             <img class="pref-icon" src="images/bike-duration.png">
             <a class="next" href="#pref-walking-duration">></a>
             <label for="slider-fill">Maximum cycling duration (in minutes)</label>
-            <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+            <input type="range" name="slider-fill" id="slider-fill1" value="30" min="0" max="60" data-highlight="true" />
         </div>
         <div data-role="footer" class"ui-footer">
             
         </div>
       </div> 
       
-      <div data-role="page" id="pref-walking-duration" class="ui-page">
+      <div data-role="page" id="pref-walking-duration" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -177,14 +199,14 @@
             <img class="pref-icon" src="images/walking-duration.png">
             <a class="next" href="#pref-reminder-duration">></a>
             <label for="slider-fill">Maximum walking duration (in minutes)</label>
-            <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+            <input type="range" name="slider-fill" id="slider-fill2" value="30" min="0" max="60" data-highlight="true" />
         </div>
         <div data-role="footer" class"ui-footer">
             
         </div>
       </div> 
       
-      <div data-role="page" id="pref-reminder-duration" class="ui-page">
+      <div data-role="page" id="pref-reminder-duration" class="ui-page pref">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
@@ -192,7 +214,7 @@
             <img class="pref-icon" src="images/reminder-duration.png">
             <a class="next" href="#main">></a>
             <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
-            <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+            <input type="range" name="slider-fill" id="slider-fill3" value="30" min="0" max="60" data-highlight="true" />
         </div>
         <div data-role="footer" class"ui-footer">
             
@@ -201,7 +223,7 @@
       
       <div data-role="page" id="main" class="ui-page">
         <div data-role="header" class"ui-header">
-            <a href="#"><img class="preferences-icon" src="images/preferences.png"></a>
+            <a href="#preferences" data-transition="slidedown"><img class="preferences-icon" src="images/preferences.png"></a>
         </div>
         <div data-role="content" class"ui-content">
             
@@ -221,7 +243,83 @@
             
         </div>
         <div data-role="content" class"ui-content">
-            
+            <a class="back" href="#main">^</a>
+            <div class="preferences-bar">
+                <div class="preferences-icons bike"><img src="images/bike.png"></div>
+                <div class="preferences-content">
+                    <label for="flip-1">Do you have a bicycle?</label>
+                    <select name="flip-1" id="flip-1" data-role="slider">
+	                   <option value="off">NO</option>
+	                   <option value="on">YES</option>
+                    </select> 
+                    </label>                    
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons car"><img src="images/car.png"></div>
+                <div class="preferences-content">
+                    <label for="flip-2">Do you have a car?</label>
+                    <select name="flip-2" id="flip-2" data-role="slider">
+	                   <option value="off">NO</option>
+	                   <option value="on">YES</option>
+                    </select> 
+                    </label>
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons public-transport"><img src="images/public-transport.png"></div>
+                <div class="preferences-content">
+                    <label for="flip-3">Is public transport an option for you?</label>
+                    <select name="flip-3" id="flip-3" data-role="slider">
+	                   <option value="off">NO</option>
+	                   <option value="on">YES</option>
+                    </select> 
+                    </label>
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons walking"><img src="images/walking.png"></div>
+                <div class="preferences-content">
+                    <label for="flip-4">Is walking an option for you?</label>
+                    <select name="flip-4" id="flip-4" data-role="slider">
+	                   <option value="off">NO</option>
+	                   <option value="on">YES</option>
+                    </select> 
+                    </label>
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons bike-rain"><img src="images/bike-rain.png"></div>
+                <div class="preferences-content">
+                    <label for="flip-5">Do you cycle when it is raining?</label>
+                    <select name="flip-5" id="flip-5" data-role="slider">
+	                   <option value="off">NO</option>
+	                   <option value="on">YES</option>
+                    </select> 
+                    </label>
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons bike-duration"><img src="images/bike-duration.png"></div>
+                <div class="preferences-content">
+                    <label for="slider-fill">Maximum cycling duration (in minutes)</label>
+                    <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons walking-duration"><img src="images/walking-duration.png"></div>
+                <div class="preferences-content">
+                    <label for="slider-fill">Maximum walking duration (in minutes)</label>
+                    <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+                </div>
+            </div>
+            <div class="preferences-bar">
+                <div class="preferences-icons reminder-duration"><img src="images/reminder-duration.png"></div>
+                <div class="preferences-content">
+                    <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
+                    <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+                </div>
+            </div>
         </div>
         <div data-role="footer" class"ui-footer">
             

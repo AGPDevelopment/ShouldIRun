@@ -34,6 +34,10 @@
     font-weight: normal;
 }
 
+.pref .ui-footer {
+    display: none;   
+}
+
 .ui-footer {
     background: #edefee;
     position:fixed;
@@ -65,35 +69,35 @@
     background: #8c9fa0;
 }
 
-#pref-bike, #pref-bike h1 {
+#pref-bike, #pref-bike h1, .bike {
     background: #27bb9f;   
 }
 
-#pref-car, #pref-car h1 {
+#pref-car, #pref-car h1, .car {
     background: #f4a145;   
 }
 
-#pref-public-transport, #pref-public-transport h1 {
+#pref-public-transport, #pref-public-transport h1, .public-transport {
     background: #3298d4;   
 }
 
-#pref-walking, #pref-walking h1 {
+#pref-walking, #pref-walking h1, .walking {
     background: #eec13f;   
 }
 
-#pref-bike-rain, #pref-bike-rain h1 {
+#pref-bike-rain, #pref-bike-rain h1, .bike-rain {
     background: #30b671;   
 }
 
-#pref-bike-duration, #pref-bike-duration h1 {
+#pref-bike-duration, #pref-bike-duration h1, .bike-duration {
     background: #d35e2a;   
 }
 
-#pref-walking-duration, #pref-walking-duration h1 {
+#pref-walking-duration, #pref-walking-duration h1, .walking-duration {
     background: #8b61aa;   
 }
 
-#pref-reminder-duration, #pref-reminder-duration h1 {
+#pref-reminder-duration, #pref-reminder-duration h1, .reminder-duration {
     background: #31495c;   
 }
 
@@ -108,3 +112,37 @@
     text-decoration: none;
 }
 
+/*Preferences screen*/
+
+.back, .back:hover {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    background: #eef0ef;
+    color: #fff;
+    text-decoration: none;
+}
+
+.preferences-bar {
+    border-top: 1px solid #eef0ef;
+    height: 80px;
+    display: block;
+    padding: 10px 0;
+}
+
+.preferences-icons {
+    width: 18%; 
+    float: left;
+    padding: 1%;
+}
+
+.preferences-icons img {
+    width: 100%;   
+}
+
+.preferences-content {
+    width: 78%;
+    float: right;
+    color: #000;
+}
