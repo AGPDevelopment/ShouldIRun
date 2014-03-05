@@ -28,13 +28,10 @@ ul li{
 .grey{
     color: #c4c6c6;
 }
-<<<<<<< HEAD
 .bg-grey{
     background-color: #edefee;
 }
 
-=======
->>>>>>> Rianne
 .ui-content, .ui-header h1{
     text-align: center;
     color: #fff;
@@ -44,11 +41,7 @@ ul li{
     background: #fff;
     margin-top: 14px;
     width: 100%;
-<<<<<<< HEAD
     height: 20px;
-=======
-    height: 50px;
->>>>>>> Rianne
     display: block;
 }
 
@@ -72,6 +65,10 @@ ul li{
     font-size: 1.6rem !important;
     font-size: 16px !important;  
     font-weight: normal;
+}
+
+.pref .ui-footer {
+    display: none;   
 }
 
 .ui-footer {
@@ -100,20 +97,6 @@ ul li{
     padding: 20px;
     margin: 0 auto;
     display: block;
-}
-
-.pref-nav {
-    margin: 2% 5%;
-    position: fixed;
-    bottom: 0;
-}
-
-.pref-nav img {
-    width: 50%;   
-}
-
-.pref-nav li {
-    width: 10%;
 }
 
 #welcome, #welcome h1 {
@@ -248,10 +231,7 @@ ul li{
     display: block;
     text-align: center;
     padding: 13px 0 0 0;
-<<<<<<< HEAD
     margin: 0;
-=======
->>>>>>> Rianne
 }
 .ui-navbar .travel-nav li em{
     font-size: 14px;
@@ -265,7 +245,6 @@ ul li{
     background-color: #2ebda2;
 }
 
-<<<<<<< HEAD
 .ui-btn-active [class^="icon-"] {
     color: #fff;
 }
@@ -361,114 +340,41 @@ ul li{
 .appointment-countdown .countdown{
     padding-top: 10px;
 }
-.ui-collapsible-set{
+.travel-options .ui-collapsible-set{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
-.ui-collapsible-set .ui-collapsible-heading{
+.travel-options .ui-collapsible-set .ui-collapsible-heading{
     -webkit-border-radius: 10px 10px 0 0 ;
     -moz-border-radius: 10px 10px 0 0 ;
     border-radius: 10px 10px 0 0 ; 
 }
-.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
+.travel-options .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
     -webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;    
     border: 0;
 }
-.ui-icon-minus, .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
+.travel-options .ui-icon-minus, .travel-options .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
     background-color: #2ebda2;
     color: #fff;
 }
-.ui-collapsible-heading-toggle{
+.travel-options .ui-collapsible-heading-toggle{
     padding: 12px 18px;
     font-size: 12px;
 }
-.ui-collapsible-heading-toggle span {
+.travel-options .ui-collapsible-heading-toggle span {
     font-size: 25px;
 }
-.ui-collapsible-heading-toggle span.bg {
+.travel-options .ui-collapsible-heading-toggle span.bg {
     background-color:  #2ebda2;
     color: #fff;
     -webkit-border-radius: 13px;
     -moz-border-radius: 13px;
     border-radius: 13px; 
 }
-.ui-icon-minus span.bg{
+.travel-options .ui-icon-minus span.bg{
     background-color:  #eef0ef;
     color: #2ebda2;
 }
-=======
-.ui-btn-active [class^="icon-"], [class*=" icon-"] {
-    color: #fff;
-}
-
-.travel-options{
-    padding: 58px 0 0 0;
-}
-
-.travel-options, .travel-options h1{
-    text-align: center;
-    color:  #2ebda2;
-}
-.travel-options span{
-    display: block;
-    font-size: 12px;
-}
-.travel-options .countdown{
-    font-size: 18px;
-    padding-top: 15px;
-}
-.travel-options .list-container{
-    padding-top: 45px;
-}
-.list-container{
-    position: relative;
-}
-
-.travel-options ul{
-    
-}
-.travel-options li{
-    width: 130px;
-}
-.travel-options li span.option{
-  font-size: 68px;  
-}
-.travel-options li.roundabout-in-focus span.option{
-    font-size: 123px;
-    transition: font-size 0.2s;
-}
-.roundabout-holder {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 20em;
-}
-.travel-options .conditions {
-    padding-top: 23px;
-    display: none;
-}
-.travel-options .conditions span{
-    font-size: 25px;
-    display: inline;
-}
-.travel-options li.roundabout-in-focus .conditions{
-    display: block;
-}
-.travel-options .nav-prev, .travel-options .nav-next{
-    color: #2ebda2;
-    position: absolute;
-    top: 82px;
-}
-.travel-options .nav-prev span, .travel-options .nav-next span{
-    font-size: 20px;
-}
-.travel-options .nav-prev{
-    left: 2px;
-}
-.travel-options .nav-next{
-    right: 2px;
-}
->>>>>>> Rianne
