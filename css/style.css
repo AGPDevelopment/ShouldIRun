@@ -43,10 +43,11 @@ ul li{
     font-weight: normal;
     padding: 0;
 }
-
+.preferences-menu{
+    float: right;
+}    
 .preferences-icon {
     display: block;
-    float: right;
 }
 
 .ui-content, label {
@@ -174,6 +175,11 @@ ul li{
     color: #2ebda2;
     font-size: 12px;
 
+}
+.main-header{
+    clear: both;
+    width: 100%;
+    display: inline-block;
 }
 .placeholder{
     background-color: #2ebda2;
