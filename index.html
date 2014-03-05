@@ -10,6 +10,7 @@
     <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.0.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/location.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.roundabout.js"></script>
     <script type="text/javascript" charset="utf-8">
 		document.addEventListener("deviceready", onDeviceReady, false);
 		// PhoneGap is ready
@@ -17,6 +18,11 @@
 		function onDeviceReady() {
 			var db = window.openDatabase("weer", "1.0", "Weer", 1000000);
 		}
+    $(document).ready(function() {
+      $('#main-travel .travel-options ul').roundabout({
+        btnNext: ".next"
+      });
+    });
     </script>
       
     <script>
@@ -36,7 +42,7 @@
           
         $('#preferences').submit(function() {
             insertScore(1, $('#flip-1').val(), $('#flip-2').val(), $('#flip-3').val(), $('#flip-4').val(), $('#flip-5').val(), $('#slider-fill1').val(), $('#slider-fill2').val(), $('#slider-fill3').val());
-          }
+          });
           
       });
     </script>
@@ -320,8 +326,26 @@
             </div>
             <a href="#preferences" data-transition="slidedown" class="preferences-menu"><img class="preferences-icon" src="images/preferences.png"></a>
         </div>
-        <div data-role="content">
-             
+        <div class="travel-options">
+             <span>Time remaining</span>
+             <span class="countdown red">00 : 01 : 38</span>
+             <div class="list-container">
+                <ul>
+                  <li>
+                    <a href=""><span class="icon-public"></span></a>
+                  </li>
+                  <li>
+                    <a href=""><span class="icon-bike"></span></a>
+                  </li>
+                  <li>
+                    <a href=""><span class="icon-car"></span></a>
+                  </li>
+                  <li>
+                    <a href=""><span class="icon-walking"></span></a>
+                  </li>
+                </ul>
+                <!-- <a href="#" class="next">Next</a> -->
+             </div>
         </div>
         <div data-role="footer" class="main-footer">
             <ul class="travel-nav">
