@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-c8tpdy');
-	src:url('../fonts/icomoon.eot?#iefix-c8tpdy') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-c8tpdy') format('woff'),
-		url('../fonts/icomoon.ttf?-c8tpdy') format('truetype'),
-		url('../fonts/icomoon.svg?-c8tpdy#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?dd0pyd');
+	src:url('../fonts/icomoon.eot?#iefixdd0pyd') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?dd0pyd') format('woff'),
+		url('../fonts/icomoon.ttf?dd0pyd') format('truetype'),
+		url('../fonts/icomoon.svg?dd0pyd#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,9 +23,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-sun:before {
-	content: "\e607";
-}
 .icon-wind:before {
 	content: "\e608";
 }
@@ -34,9 +31,6 @@
 }
 .icon-rain:before {
 	content: "\e60a";
-}
-.icon-time:before {
-	content: "\e60b";
 }
 .icon-info:before {
 	content: "\e60c";
@@ -88,6 +82,12 @@
 }
 .icon-clock:before {
 	content: "\e611";
+}
+.icon-time:before {
+	content: "\e60b";
+}
+.icon-sun:before {
+	content: "\e607";
 }
 
 /* custom css */
