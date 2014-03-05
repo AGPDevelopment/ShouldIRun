@@ -253,16 +253,36 @@ ul li{
 .red{
     color: #ec5c52;
 }
+.grey{
+    color: #c4c6c6;
+}
 .travel-options ul{
     
 }
 .travel-options li{
     width: 130px;
 }
-.travel-options li span{
+.travel-options li span.option{
   font-size: 68px;  
 }
-.travel-options li.roundabout-in-focus span{
+.travel-options li.roundabout-in-focus span.option{
     font-size: 123px;
     transition: font-size 0.2s;
+}
+.roundabout-holder {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 20em;
+}
+.travel-options .conditions {
+    padding-top: 23px;
+    display: none;
+}
+.travel-options .conditions span{
+    font-size: 24px;
+    display: inline;
+}
+.travel-options li.roundabout-in-focus .conditions{
+    display: block;
 }
