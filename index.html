@@ -11,6 +11,7 @@
     <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.0.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/location.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.roundabout.js"></script>
+    <script type="text/javascript" charset="utf-8" src="dragend-0.2.0_rc3.min.js"></script>
     <script type="text/javascript" charset="utf-8">
 		document.addEventListener("deviceready", onDeviceReady, false);
 		// PhoneGap is ready
@@ -44,6 +45,10 @@
          });
       });
     </script>
+      
+      <script>
+           
+      </script>
   </head>
   <body>
       
@@ -92,7 +97,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/bike.png">
-            <a class="next" href="#pref-car">></a>
+            <a href="#pref-car">></a>
             <label for="flip-1">Do you have a bicycle?</label>
             <select name="flip-1" id="flip-1" data-role="slider">
 	           <option value="off">NO</option>
@@ -111,7 +116,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/car.png">
-            <a class="next" href="#pref-public-transport">></a>
+            <a href="#pref-public-transport">></a>
             <label for="flip-2">Do you have a car?</label>
             <select name="flip-2" id="flip-2" data-role="slider">
 	           <option value="off">NO</option>
@@ -130,7 +135,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/public-transport.png">
-            <a class="next" href="#pref-walking">></a>
+            <a href="#pref-walking">></a>
             <label for="flip-3">Is public transport an option for you?</label>
             <select name="flip-3" id="flip-3" data-role="slider">
 	           <option value="off">NO</option>
@@ -149,7 +154,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/walking.png">
-            <a class="next" href="#pref-bike-rain">></a>
+            <a href="#pref-bike-rain">></a>
             <label for="flip-4">Is walking an option for you?</label>
             <select name="flip-4" id="flip-4" data-role="slider">
 	           <option value="off">NO</option>
@@ -168,7 +173,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/bike-rain.png">
-            <a class="next" href="#pref-bike-duration">></a>
+            <a href="#pref-bike-duration">></a>
             <label for="flip-5">Do you cycle when it is raining?</label>
             <select name="flip-5" id="flip-5" data-role="slider">
 	           <option value="off">NO</option>
@@ -187,7 +192,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/bike-duration.png">
-            <a class="next" href="#pref-walking-duration">></a>
+            <a href="#pref-walking-duration">></a>
             <label for="slider-fill">Maximum cycling duration (in minutes)</label>
             <input type="range" name="slider-fill" id="slider-fill1" value="30" min="0" max="60" data-highlight="true" />
         </div>
@@ -202,7 +207,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/walking-duration.png">
-            <a class="next" href="#pref-reminder-duration">></a>
+            <a href="#pref-reminder-duration">></a>
             <label for="slider-fill">Maximum walking duration (in minutes)</label>
             <input type="range" name="slider-fill" id="slider-fill2" value="30" min="0" max="60" data-highlight="true" />
         </div>
@@ -217,7 +222,7 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/reminder-duration.png">
-            <a class="next" href="#main-travel">></a>
+            <a href="#main-travel">></a>
             <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
             <input type="range" name="slider-fill" id="slider-fill3" value="30" min="0" max="60" data-highlight="true" />
         </div>
