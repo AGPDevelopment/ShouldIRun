@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-c8tpdy');
-	src:url('../fonts/icomoon.eot?#iefix-c8tpdy') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-c8tpdy') format('woff'),
-		url('../fonts/icomoon.ttf?-c8tpdy') format('truetype'),
-		url('../fonts/icomoon.svg?-c8tpdy#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?57sr92');
+	src:url('../fonts/icomoon.eot?#iefix57sr92') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?57sr92') format('woff'),
+		url('../fonts/icomoon.ttf?57sr92') format('truetype'),
+		url('../fonts/icomoon.svg?57sr92#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -17,6 +17,7 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+	padding: 25px;
 
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
@@ -53,6 +54,9 @@
 .icon-agenda:before {
 	content: "\e610";
 }
+.icon-bike-rain:before {
+	content: "\e611";
+}
 .icon-public:before {
 	content: "\e600";
 }
@@ -86,11 +90,7 @@
 .icon-location:before {
 	content: "\e615";
 }
-.icon-clock:before {
-	content: "\e611";
-}
 
-/* custom css */
 .green{
 	color: #34B297; 
 }
