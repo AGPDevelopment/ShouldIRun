@@ -17,14 +17,9 @@
 		//
 		function onDeviceReady() {
 			var db = window.openDatabase("weer", "1.0", "Weer", 1000000);
-		}
-    $(document).ready(function() {
-      $('#main-travel .travel-options ul').roundabout({
-        btnNext: ".next"
-      });
-    });
+		}   
     </script>
-      
+
     <script>
       var db = window.openDatabase("preferences", "", "Preferences app", 1024*1000);
         
@@ -43,7 +38,10 @@
         $('#preferences').submit(function() {
             insertScore(1, $('#flip-1').val(), $('#flip-2').val(), $('#flip-3').val(), $('#flip-4').val(), $('#flip-5').val(), $('#slider-fill1').val(), $('#slider-fill2').val(), $('#slider-fill3').val());
           });
-          
+         $('#main-travel .travel-options ul').roundabout({
+            btnNext: ".nav-next",
+            btnPrev: ".nav-prev"
+         });
       });
     </script>
   </head>
@@ -330,6 +328,7 @@
              <span>Time remaining</span>
              <span class="countdown red">00 : 01 : 38</span>
              <div class="list-container">
+                <a href="#" class="nav-prev"><span class="icon-arrow-left"></span></a>
                 <ul>
                   <li>
                     <a href="">
@@ -361,13 +360,14 @@
                     </a>
                   </li>
                 </ul>
-                <!-- <a href="#" class="next">Next</a> -->
+                <a href="#" class="nav-next"><span class="icon-arrow-right"></span></a>
              </div>
+
         </div>
-        <div data-role="footer" class="main-footer">
+        <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
               <li><a href=""><span class="icon-agenda"><em>Schedule</em></span></a></li>
-              <li class="active"><a href=""><span class="icon-public"><em>Transport</em></span></a></li>
+              <li><a href=""><span class="icon-public"><em>Transport</em></span></a></li>
               <li><a href=""><span class="icon-location"><em>Add pointment</em></span></a></li>
             </ul>
         </div>
