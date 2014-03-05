@@ -325,17 +325,19 @@
             <a href="#preferences" data-transition="slidedown" class="preferences-menu"><img class="preferences-icon" src="images/preferences.png"></a>
         </div>
         <div class="travel-options">
+          <div class="appointment-countdown">
              <span>Time remaining</span>
              <span class="countdown red">00 : 01 : 38</span>
+            </div>
              <div class="list-container">
                 <a href="#" class="nav-prev"><span class="icon-arrow-left"></span></a>
                 <ul>
                   <li>
-                    <a href="">
-                      <span class="icon-public option grey"></span>
+                    <a href="#main-travel-option-one">
+                      <span class="icon-public option"></span>
                       <div class="conditions">
-                        <span class="icon-time red"></span>
-                        <span class="icon-snow red"></span>
+                        <span class="icon-wind red"></span>
+                        <span class="icon-rain red"></span>
                       </div>
                     </a>
                   </li>
@@ -348,11 +350,17 @@
                     </a>
                   </li>
                   <li>
-                    <a href=""><span class="icon-car option"></span></a>
+                    <a href="">
+                      <span class="icon-car option"></span>
+                      <div class="conditions">
+                        <span class="icon-time red"></span>
+                        <span class="icon-snow red"></span>
+                      </div>
+                    </a>
                   </li>
                   <li>
                     <a href="">
-                      <span class="icon-walking option"></span>
+                      <span class="icon-walking option grey"></span>
                       <div class="conditions">
                         <span class="icon-time red"></span>
                         <span class="icon-rain red"></span>
@@ -362,17 +370,82 @@
                 </ul>
                 <a href="#" class="nav-next"><span class="icon-arrow-right"></span></a>
              </div>
-
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
               <li><a href=""><span class="icon-agenda"><em>Schedule</em></span></a></li>
-              <li><a href=""><span class="icon-public"><em>Transport</em></span></a></li>
+              <li><a href="" class="ui-btn-active"><span class="icon-public"><em>Transport</em></span></a></li>
               <li><a href=""><span class="icon-location"><em>Add pointment</em></span></a></li>
             </ul>
         </div>
       </div>
       
+      <div data-role="page" id="main-travel-option-one" class="ui-page details">
+        <div class="main-header">
+            <div class="travel-option-details">
+              <span class="icon-public option"></span>
+                  <div class="conditions">
+                    <span class="icon-wind red"></span>
+                    <span class="icon-rain red"></span>
+                  </div>
+            </div>
+            <div class="appointment-title">
+                <span>Mobile System Lecture</span>
+                <span>UvA, Science Park 904, G2.10</span>               
+            </div>
+            <div class="appointment-countdown">
+             <span>Time remaining</span>
+             <span class="countdown">00 : 01 : 38</span>
+            </div>
+            <a href="#preferences" data-transition="slidedown" class="preferences-menu"><img class="preferences-icon" src="images/preferences.png"></a>
+        </div>
+        <div class="travel-options">
+            
+             <div data-role="collapsible-set" class="bg-grey">
+
+              <div data-role="collapsible">
+                <h3>
+                  1:23 PM - 1:36 PM (13 min)
+                  <br />
+                  <span class="icon-train bg"></span>
+                  <span class="icon-arrow-right"></span>
+                  <span class="icon-walking bg"></span>
+                </h3>
+                <p>I'm the collapsible set content for section 1.</p>
+              </div>
+              
+              <div data-role="collapsible">
+                 <h3>
+                  1:23 PM - 1:36 PM (13 min)
+                  <br />
+                  <span class="icon-train bg"></span>
+                  <span class="icon-arrow-right"></span>
+                  <span class="icon-walking bg"></span>
+                </h3>
+                <p>I'm the collapsible set content for section 1.</p>
+              </div>
+
+              <div data-role="collapsible">
+                 <h3>
+                  1:23 PM - 1:36 PM (13 min)
+                  <br />
+                  <span class="icon-train bg"></span>
+                  <span class="icon-arrow-right"></span>
+                  <span class="icon-walking bg"></span>
+                </h3>
+                <p>I'm the collapsible set content for section 1.</p>
+              </div>
+              
+            </div>
+        </div>
+        <div data-role="navbar" class="main-footer">
+            <ul class="travel-nav">
+              <li><a href=""><span class="icon-agenda"><em>Schedule</em></span></a></li>
+              <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
+              <li><a href=""><span class="icon-location"><em>Add pointment</em></span></a></li>
+            </ul>
+        </div>
+      </div>
 
       <div data-role="page" id="" class="ui-page">
         <div data-role="header" class"ui-header">

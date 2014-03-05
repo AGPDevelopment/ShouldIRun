@@ -28,6 +28,10 @@ ul li{
 .grey{
     color: #c4c6c6;
 }
+.bg-grey{
+    background-color: #edefee;
+}
+
 .ui-content, .ui-header h1{
     text-align: center;
     color: #fff;
@@ -176,9 +180,10 @@ ul li{
     float: right;
     color: #000;
 }
-
-#main-travel{
+.ui-page{
     margin-top: 14px;
+}
+#main-travel{
     color: #2ebda2;
     font-size: 12px;
 
@@ -195,11 +200,10 @@ ul li{
     width: 13px;
     float: left;
 }
-.appointment-title{
+.appointment-title, .appointment-countdown{
     padding-left: 5px;
-    float: left;
 }
-.appointment-title span{
+.appointment-title span, .appointment-countdown span{
     display: block;
 }
 .appointment-title span + span{
@@ -227,6 +231,7 @@ ul li{
     display: block;
     text-align: center;
     padding: 13px 0 0 0;
+    margin: 0;
 }
 .ui-navbar .travel-nav li em{
     font-size: 14px;
@@ -240,25 +245,26 @@ ul li{
     background-color: #2ebda2;
 }
 
-.ui-btn-active [class^="icon-"], [class*=" icon-"] {
+.ui-btn-active [class^="icon-"] {
     color: #fff;
 }
 
 .travel-options{
-    padding: 58px 0 0 0;
+    padding: 58px 23px 0 23px;
+    text-align: center;
 }
 
 .travel-options, .travel-options h1{
     text-align: center;
     color:  #2ebda2;
 }
-.travel-options span{
+.appointment-countdown span{
     display: block;
     font-size: 12px;
 }
-.travel-options .countdown{
+.appointment-countdown .countdown{
     font-size: 18px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .travel-options .list-container{
     padding-top: 45px;
@@ -267,9 +273,6 @@ ul li{
     position: relative;
 }
 
-.travel-options ul{
-    
-}
 .travel-options li{
     width: 130px;
 }
@@ -286,11 +289,14 @@ ul li{
     margin: 0;
     width: 20em;
 }
-.travel-options .conditions {
-    padding-top: 23px;
-    display: none;
+.conditions {
+    padding-top: 10px;
 }
-.travel-options .conditions span{
+.roundabout-holder .conditions{
+    display: none;
+    padding-top: 23px;
+}
+.conditions span{
     font-size: 25px;
     display: inline;
 }
@@ -310,4 +316,65 @@ ul li{
 }
 .travel-options .nav-next{
     right: 2px;
+}
+
+.ui-page.details .travel-option-details{
+    width: 30%;
+    margin: 0;
+    text-align: center;
+    float: left;
+}
+
+.travel-option-details .option{
+    font-size: 62px;
+}
+.details .appointment-title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2ebda2;
+    margin-bottom: 10px;
+    float: left;
+}
+.details .appointment-countdown{
+    float: left;
+}
+.appointment-countdown .countdown{
+    padding-top: 10px;
+}
+.ui-collapsible-set{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.ui-collapsible-set .ui-collapsible-heading{
+    -webkit-border-radius: 10px 10px 0 0 ;
+    -moz-border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0 ; 
+}
+.ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;    
+    border: 0;
+}
+.ui-icon-minus, .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
+    background-color: #2ebda2;
+    color: #fff;
+}
+.ui-collapsible-heading-toggle{
+    padding: 12px 18px;
+    font-size: 12px;
+}
+.ui-collapsible-heading-toggle span {
+    font-size: 25px;
+}
+.ui-collapsible-heading-toggle span.bg {
+    background-color:  #2ebda2;
+    color: #fff;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px; 
+}
+.ui-icon-minus span.bg{
+    background-color:  #eef0ef;
+    color: #2ebda2;
 }
