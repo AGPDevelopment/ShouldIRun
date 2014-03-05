@@ -1,14 +1,35 @@
 @charset "utf-8";
-
+html, body{
+    color: #2ebda2; 
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #2ebda2;
+    text-decoration: none;
+    font-family: 'Helvetica', sans-serif;
+}
+ul{
+    list-style: none;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    float: left;
+}
 .ui-content, .ui-header h1{
     text-align: center;
     color: #fff;
-    font-family: 'Verdana', sans-serif;
 }
 
 .ui-header {
     background: #fff;
-    margin-top: 10px;
+    margin-top: 14px;
     width: 100%;
     height: 20px
     display: block;
@@ -39,12 +60,13 @@
 }
 
 .ui-footer {
-    background: #edefee;
+    background: #eef0ef;
     position:fixed;
     bottom: 0px;
-    height: 112px;
+    height: 86px;
     width: 100%;
     display: block;
+    border: 0;
 }
 
 .footer-icon1 {
@@ -145,4 +167,59 @@
     width: 78%;
     float: right;
     color: #000;
+}
+
+#main-travel{
+    margin-top: 14px;
+    color: #2ebda2;
+    font-size: 12px;
+
+}
+.placeholder{
+    background-color: #2ebda2;
+    display: inline-block;
+    height: 26px;
+    width: 13px;
+    float: left;
+}
+.appointment-title{
+    padding-left: 5px;
+    float: left;
+}
+.appointment-title span{
+    display: block;
+}
+.appointment-title span + span{
+    font-style: italic;
+    font-size: 13px;
+}
+.travel-nav {
+    height: 100%;
+}
+.travel-nav li{
+    width: 33%;
+    height: 100%;
+}
+.travel-nav li a{
+    font-size: 41px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 13px;
+}
+.travel-nav li em{
+    font-size: 14px;
+    font-style: normal;
+    display: block;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 11px;
+}
+
+.active{
+    background-color: #2ebda2;
+}
+
+.active [class^="icon-"], [class*=" icon-"] {
+    color: #fff;
 }
