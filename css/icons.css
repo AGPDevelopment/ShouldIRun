@@ -89,15 +89,21 @@
 .icon-sun:before {
 	content: "\e607";
 }
+.icon-arrow-right:before {
+	content: "\e616";
+}
+.icon-arrow-left:before {
+	content: "\e617";
+}
 
 /* custom css */
 .green{
 	color: #2ebda2;
 }
 .bg-green{
-	background-color: #2ebda2;
-}
-
-#example [class^="icon-"], [class*=" icon-"] {
-	font-size: 50px;
-}
+    background-color:  #2ebda2;
+    color: #fff;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px; 
+ }

@@ -1,6 +1,6 @@
 @charset "utf-8";
 html, body{
-    color: #2ebda2; 
+    color: transparent; 
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
     margin: 0;
@@ -28,6 +28,10 @@ ul li{
 .grey{
     color: #c4c6c6;
 }
+.bg-grey{
+    background-color: #edefee;
+}
+
 .ui-content, .ui-header h1{
     text-align: center;
     color: #fff;
@@ -37,7 +41,7 @@ ul li{
     background: #fff;
     margin-top: 14px;
     width: 100%;
-    height: 50px;
+    height: 20px;
     display: block;
 }
 
@@ -91,18 +95,48 @@ ul li{
     display: block;
 }
 
-.pref-nav {
-    margin: 2% 5%;
-    position: fixed;
-    bottom: 0;
+div.ui-slider-switch {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;   
 }
 
-.pref-nav img {
-    width: 50%;   
+.ui-slider-switch .ui-slider-label-a {
+    background: #30b671;  
+    color: #fff;
+    text-indent: 0;
 }
 
-.pref-nav li {
-    width: 10%;
+.ui-slider-switch .ui-slider-label-b {
+    background: #e54e43;   
+    color: #fff;
+    text-indent: 0;
+}
+
+/*Preference begin screens*/
+
+#welcome .ui-header,
+#pref-bike .ui-header,
+#pref-car .ui-header,
+#pref-public-transport .ui-header,
+#pref-walking .ui-header,
+#pref-bike-rain .ui-header,
+#pref-bike-duration .ui-header,
+#pref-walking-duration .ui-header,
+#pref-reminder-duration .ui-header{
+    height: 50px !important;
+}
+
+#welcome a,
+#pref-bike a,
+#pref-car a,
+#pref-public-transport a,
+#pref-walking a,
+#pref-bike-rain a,
+#pref-bike-duration a,
+#pref-walking-duration a,
+#pref-reminder-duration a {
+    color: #fff;   
 }
 
 #welcome, #welcome h1 {
@@ -152,6 +186,20 @@ ul li{
     text-decoration: none;
 }
 
+.pref-nav {
+    margin: 2% 5%;
+    position: fixed;
+    bottom: 0;
+}
+
+.pref-nav img {
+    width: 50%;   
+}
+
+.pref-nav li {
+    width: 10%;
+}
+
 /*Preferences screen*/
 
 .back, .back:hover {
@@ -159,8 +207,9 @@ ul li{
     width: 100%;
     text-align: center;
     font-size: 30px;
+    padding-top: 5px;
     background: #eef0ef;
-    color: #fff;
+    color: #4e4e4e;
     text-decoration: none;
 }
 
@@ -172,13 +221,16 @@ ul li{
 }
 
 .preferences-icons {
-    width: 18%; 
+    width: 70px; 
     float: left;
     padding: 1%;
 }
 
 .preferences-icons img {
-    width: 100%;   
+    width: auto; 
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .preferences-content {
@@ -186,9 +238,10 @@ ul li{
     float: right;
     color: #000;
 }
-
-#main-travel{
+.ui-page{
     margin-top: 14px;
+}
+#main-travel{
     color: #2ebda2;
     font-size: 12px;
 
@@ -205,11 +258,10 @@ ul li{
     width: 13px;
     float: left;
 }
-.appointment-title{
+.appointment-title, .appointment-countdown{
     padding-left: 5px;
-    float: left;
 }
-.appointment-title span{
+.appointment-title span, .appointment-countdown span{
     display: block;
 }
 .appointment-title span + span{
@@ -237,6 +289,7 @@ ul li{
     display: block;
     text-align: center;
     padding: 13px 0 0 0;
+    margin: 0;
 }
 .ui-navbar .travel-nav li em{
     font-size: 14px;
@@ -250,25 +303,26 @@ ul li{
     background-color: #2ebda2;
 }
 
-.ui-btn-active [class^="icon-"], [class*=" icon-"] {
+.ui-btn-active [class^="icon-"] {
     color: #fff;
 }
 
 .travel-options{
-    padding: 58px 0 0 0;
+    padding: 58px 23px 0 23px;
+    text-align: center;
 }
 
 .travel-options, .travel-options h1{
     text-align: center;
     color:  #2ebda2;
 }
-.travel-options span{
+.appointment-countdown span{
     display: block;
     font-size: 12px;
 }
-.travel-options .countdown{
+.appointment-countdown .countdown{
     font-size: 18px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 .travel-options .list-container{
     padding-top: 45px;
@@ -277,9 +331,6 @@ ul li{
     position: relative;
 }
 
-.travel-options ul{
-    
-}
 .travel-options li{
     width: 130px;
 }
@@ -296,11 +347,14 @@ ul li{
     margin: 0;
     width: 20em;
 }
-.travel-options .conditions {
-    padding-top: 23px;
-    display: none;
+.conditions {
+    padding-top: 10px;
 }
-.travel-options .conditions span{
+.roundabout-holder .conditions{
+    display: none;
+    padding-top: 23px;
+}
+.conditions span{
     font-size: 25px;
     display: inline;
 }
@@ -320,4 +374,65 @@ ul li{
 }
 .travel-options .nav-next{
     right: 2px;
+}
+
+.ui-page.details .travel-option-details{
+    width: 30%;
+    margin: 0;
+    text-align: center;
+    float: left;
+}
+
+.travel-option-details .option{
+    font-size: 62px;
+}
+.details .appointment-title{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2ebda2;
+    margin-bottom: 10px;
+    float: left;
+}
+.details .appointment-countdown{
+    float: left;
+}
+.appointment-countdown .countdown{
+    padding-top: 10px;
+}
+.travel-options .ui-collapsible-set{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.travel-options .ui-collapsible-set .ui-collapsible-heading{
+    -webkit-border-radius: 10px 10px 0 0 ;
+    -moz-border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0 ; 
+}
+.travel-options .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;    
+    border: 0;
+}
+.travel-options .ui-icon-minus, .travel-options .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
+    background-color: #2ebda2;
+    color: #fff;
+}
+.travel-options .ui-collapsible-heading-toggle{
+    padding: 12px 18px;
+    font-size: 12px;
+}
+.travel-options .ui-collapsible-heading-toggle span {
+    font-size: 25px;
+}
+.travel-options .ui-collapsible-heading-toggle span.bg {
+    background-color:  #2ebda2;
+    color: #fff;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px; 
+}
+.travel-options .ui-icon-minus span.bg{
+    background-color:  #eef0ef;
+    color: #2ebda2;
 }
