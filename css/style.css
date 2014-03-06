@@ -1,6 +1,6 @@
 @charset "utf-8";
 html, body{
-    color: #2ebda2; 
+    color: transparent; 
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
     margin: 0;
@@ -67,10 +67,6 @@ ul li{
     font-weight: normal;
 }
 
-.pref .ui-footer {
-    display: none;   
-}
-
 .ui-footer {
     background: #eef0ef;
     position:fixed;
@@ -97,6 +93,50 @@ ul li{
     padding: 20px;
     margin: 0 auto;
     display: block;
+}
+
+div.ui-slider-switch {
+    background: #fff;
+    color: #000;
+    border: 1px solid #fff;   
+}
+
+.ui-slider-switch .ui-slider-label-a {
+    background: #30b671;  
+    color: #fff;
+    text-indent: 0;
+}
+
+.ui-slider-switch .ui-slider-label-b {
+    background: #e54e43;   
+    color: #fff;
+    text-indent: 0;
+}
+
+/*Preference begin screens*/
+
+#welcome .ui-header,
+#pref-bike .ui-header,
+#pref-car .ui-header,
+#pref-public-transport .ui-header,
+#pref-walking .ui-header,
+#pref-bike-rain .ui-header,
+#pref-bike-duration .ui-header,
+#pref-walking-duration .ui-header,
+#pref-reminder-duration .ui-header{
+    height: 50px !important;
+}
+
+#welcome a,
+#pref-bike a,
+#pref-car a,
+#pref-public-transport a,
+#pref-walking a,
+#pref-bike-rain a,
+#pref-bike-duration a,
+#pref-walking-duration a,
+#pref-reminder-duration a {
+    color: #fff;   
 }
 
 #welcome, #welcome h1 {
@@ -146,6 +186,20 @@ ul li{
     text-decoration: none;
 }
 
+.pref-nav {
+    margin: 2% 5%;
+    position: fixed;
+    bottom: 0;
+}
+
+.pref-nav img {
+    width: 50%;   
+}
+
+.pref-nav li {
+    width: 10%;
+}
+
 /*Preferences screen*/
 
 .back, .back:hover {
@@ -153,8 +207,9 @@ ul li{
     width: 100%;
     text-align: center;
     font-size: 30px;
+    padding-top: 5px;
     background: #eef0ef;
-    color: #fff;
+    color: #4e4e4e;
     text-decoration: none;
 }
 
@@ -166,13 +221,16 @@ ul li{
 }
 
 .preferences-icons {
-    width: 18%; 
+    width: 70px; 
     float: left;
     padding: 1%;
 }
 
 .preferences-icons img {
-    width: 100%;   
+    width: auto; 
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .preferences-content {
