@@ -11,7 +11,7 @@
     <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.4.0.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/location.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/jquery.roundabout.js"></script>
-    <script type="text/javascript" charset="utf-8" src="dragend-0.2.0_rc3.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/dragend-0.2.0_rc3.min.js"></script>
     <script type="text/javascript" charset="utf-8">
 		document.addEventListener("deviceready", onDeviceReady, false);
 		// PhoneGap is ready
@@ -50,8 +50,7 @@
            
       </script>
   </head>
-  <body>
-      
+  <body draggable="true">
       <div data-role="page" id="index" class"ui-page">
           <div data-role="header" class"ui-header">
               <h1>Should-I-Run</h1>
@@ -84,7 +83,7 @@
         <div data-role="content" class"ui-content">
             <p>Hi! Thank you for installing the 'Should-I-Run' app on your mobile device.</p>
             <p>From now on you will never run late or miss your transport connection.</p>
-            <p>Pleas adjust your personal transport preferences first.</p>
+            <p>Please adjust your personal transport preferences first.</p>
             <a href="#pref-bike">Let's go! >></a>
             <div class="pref-nav">
 		      <ul>
@@ -251,10 +250,12 @@
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
         </div>
-        <div data-role="content" class"ui-content">
+        <div data-role="content" class"ui-content slide-bar">
             <img class="pref-icon" src="images/bike-duration.png">
-            <label for="slider-fill">Maximum cycling duration (in minutes)</label>
-            <input type="range" name="slider-fill" id="slider-fill1" value="30" min="0" max="60" data-highlight="true" />
+            <div class="slide-bar">
+                <label for="slider-fill">Maximum cycling duration (in minutes)</label>
+                <input type="range" name="slider-fill" id="slider-fill1" value="30" min="0" max="60" data-highlight="true" />
+            </div>
             <div class="pref-nav">
 		      <ul>
 			     <li><a href="#welcome"><img src="images/progress-white.png"></a></li>
@@ -278,8 +279,10 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/walking-duration.png">
-            <label for="slider-fill">Maximum walking duration (in minutes)</label>
-            <input type="range" name="slider-fill" id="slider-fill2" value="30" min="0" max="60" data-highlight="true" />
+            <div class="slide-bar">
+                <label for="slider-fill">Maximum walking duration (in minutes)</label>
+                <input type="range" name="slider-fill" id="slider-fill2" value="30" min="0" max="60" data-highlight="true" />
+            </div>
             <div class="pref-nav">
 		      <ul>
 			     <li><a href="#welcome"><img src="images/progress-white.png"></a></li>
@@ -303,8 +306,10 @@
         </div>
         <div data-role="content" class"ui-content">
             <img class="pref-icon" src="images/reminder-duration.png">
-            <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
-            <input type="range" name="slider-fill" id="slider-fill3" value="30" min="0" max="60" data-highlight="true" />
+            <div class="slide-bar">
+                <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
+                <input type="range" name="slider-fill" id="slider-fill3" value="30" min="0" max="60" data-highlight="true" />
+            </div>
             <div class="pref-nav">
 		      <ul>
 			     <li><a href="#welcome"><img src="images/progress-white.png"></a></li>
@@ -324,7 +329,7 @@
 
       <div data-role="page" id="preferences" class="ui-page">
         <div data-role="content" class"ui-content">
-            <a class="back" data-transition="slideup" href="#main-travel">^</a>
+            <a class="back" data-transition="slideup" data-rel="back" href="#">^</a>
             <div class="preferences-bar">
                 <div class="preferences-icons bike"><img src="images/bike.png"></div>
                 <div class="preferences-content">
@@ -382,23 +387,23 @@
             </div>
             <div class="preferences-bar">
                 <div class="preferences-icons bike-duration"><img src="images/bike-duration.png"></div>
-                <div class="preferences-content">
+                <div class="preferences-content slide-bar">
                     <label for="slider-fill">Maximum cycling duration (in minutes)</label>
-                    <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+                    <input type="range" name="slider-fill" id="slider-fill1" value="30" min="0" max="60" data-highlight="true" />
                 </div>
             </div>
             <div class="preferences-bar">
                 <div class="preferences-icons walking-duration"><img src="images/walking-duration.png"></div>
-                <div class="preferences-content">
+                <div class="preferences-content slide-bar">
                     <label for="slider-fill">Maximum walking duration (in minutes)</label>
-                    <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+                    <input type="range" name="slider-fill" id="slider-fill2" value="30" min="0" max="60" data-highlight="true" />
                 </div>
             </div>
             <div class="preferences-bar">
                 <div class="preferences-icons reminder-duration"><img src="images/reminder-duration.png"></div>
-                <div class="preferences-content">
+                <div class="preferences-content slide-bar">
                     <label for="slider-fill">Reminder duration before leaving (in minutes)</label>
-                    <input type="range" name="slider-fill" id="slider-fill" value="30" min="0" max="60" data-highlight="true" />
+                    <input type="range" name="slider-fill" id="slider-fill3" value="30" min="0" max="60" data-highlight="true" />
                 </div>
             </div>
         </div>
@@ -463,8 +468,8 @@
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
-              <li><a href=""><span class="icon-agenda"><em>Schedule</em></span></a></li>
-              <li><a href="" class="ui-btn-active"><span class="icon-public"><em>Transport</em></span></a></li>
+              <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
+              <li><a href="" class="ui-btn-active active"><span class="icon-public"><em>Transport</em></span></a></li>
               <li><a href=""><span class="icon-location"><em>Add pointment</em></span></a></li>
             </ul>
         </div>
@@ -530,7 +535,7 @@
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
-              <li><a href=""><span class="icon-agenda"><em>Schedule</em></span></a></li>
+              <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
               <li><a href=""><span class="icon-location"><em>Add pointment</em></span></a></li>
             </ul>
@@ -538,9 +543,9 @@
       </div>
 
       <div data-role="page" id="schedule" class="ui-page">
-        <div class"main-header">
+        <div class="main-header">
             <div class="schedule-icons">
-              <span class="icon-agenda green schedule-icon"></span>
+              <img src="images/agenda-green.png" width="30%">
                   <div class="conditions">
                     <span class="icon-snow red"></span>
                     <span class="icon-wind red"></span>
@@ -553,18 +558,174 @@
             <a href="#preferences" data-transition="slidedown" class="preferences-menu"><img class="preferences-icon" src="images/preferences.png"></a>
         </div>
         <div data-role="content" class"ui-content">
+             <div class="travel-options appointments">
             
+                <div data-role="collapsible-set" class="bg-grey">
+                    
+                    <a href="#appointment1-dialog" data-rel="dialog" data-transition="pop" data-corners="true" data-shadow="true" data-iconshadow="true" data-theme="c" class="appointment">
+                        
+                        <h3>
+                            <img class="appointment-icon" src="images/public-green.png">
+                            <br />
+                            <br />
+                            1:00 PM - 2:30 PM <br />
+                            <span class="h-normal">Lunch with classmates <span class="pijl">&#9660</span><br />
+                            <em>Polder, Science Park</em>
+                            </span>
+                        </h3>
+                        
+                    </a>
+                
+                    <a href="#appointment2-dialog" data-rel="dialog" data-transition="pop" class="appointment">
+                        <h3>
+                            <img class="appointment-icon" src="images/foot-green.png">
+                            <br />
+                            <br />
+                            3:00 PM - 5:00 PM <br />
+                            <span class="h-normal">Mobile Systems Lecture <span class="pijl">&#9660</span><br />
+                            <em>UvA, Science Park 904, G2.10</em>
+                            </span>
+                        </h3>
+                    </a>
+
+                    <a href="#appointment3-dialog" data-rel="dialog" data-transition="pop" class="appointment">
+                        <h3>
+                            <img class="appointment-icon" src="images/public-green.png">
+                            <br />
+                            <br />
+                            7:00 PM - 10:00 PM <br />
+                            <span class="h-normal">Dinner with friends <span class="pijl">&#9660</span><br />
+                            <em>Home</em>
+                            </span>
+                        </h3>
+                    </a>
+                    
+                    <h3 class="load-appointments">
+                        <span class="h-normal">Load more appointments...</span>
+                    </h3>
+              
+                 </div>
+            </div>
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
-              <li><a href="" class="ui-btn-active"><span class="icon-agenda"><em>Schedule</em></span></a></li>
-              <li><a href=""><span class="icon-public"><em>Transport</em></span></a></li>
+              <li><a href="" class="ui-btn-active active"><span class="icon-agenda"><em>Schedule</em></span></a></li>
+              <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
               <li><a href=""><span class="icon-location"><em>Add pointment</em></span></a></li>
             </ul>
         </div>
       </div>
 
 
+      <div data-role="page" id="appointment1-dialog" class="ui-page appointment-dialog">
+        <div data-role="content" class"ui-content">
+            <div class="ui-grid-a">
+	           <div class="ui-block-a">
+                   <h3>
+                        1:00 PM - 2:30 PM <br /><br />
+                        <span class="h-normal">Lunch with classmates<br />
+                        <em>Polder, Science Park</em></span><br />
+                        <img class="appointment-transport-icon" src="images/foot-green.png"><br /><br />
+                        > UvA, Science Park 904, G2.10
+                    </h3>
+                </div>
+	            <div class="ui-block-b">
+                    <span class="icon-edit"></span><br /><br /><br />
+                    <a href="#appointment1-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red"></span></a><br /><br /><br />
+                    <a href="#schedule" data-rel="back" data-icon="delete"><span class="icon-check white"></span></a>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+
+      <div data-role="page" id="appointment1-delete" class="ui-page appointment-dialog appointment-dialog-delete">
+        <div data-role="header" class"ui-header">
+            <h1>Do you really wish to delete this appointment?</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <h3>
+                1:00 PM - 2:30 PM <br /><br />
+                <span class="h-normal">Lunch with classmates<br />
+                <em>Polder, Science Park</em></span><br />
+            </h3>
+            <a href="#appointment1-dialog" data-rel="back">Cancel</a>
+            <a href="#schedule">OK</a>
+        </div>
+      </div>
+
+      <div data-role="page" id="appointment2-dialog" class="ui-page appointment-dialog">
+        <div data-role="content" class"ui-content">
+            <div class="ui-grid-a">
+	           <div class="ui-block-a">
+                   <h3>
+                        3:00 PM - 5:00 PM <br /><br />
+                        <span class="h-normal">Mobile Systems Lecture<br />
+                        <em>UvA, Science Park 904, G2.10</em></span><br />
+                        <img class="appointment-transport-icon" src="images/public-green.png"><br /><br />
+                        > Home
+                    </h3>
+                </div>
+	            <div class="ui-block-b">
+                    <span class="icon-edit"></span><br /><br /><br />
+                    <a href="#appointment2-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red"></span></a><br /><br /><br />
+                    <a href="#schedule" data-rel="back" data-icon="delete"><span class="icon-check white"></span></a>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+
+      <div data-role="page" id="appointment2-delete" class="ui-page appointment-dialog appointment-dialog-delete">
+        <div data-role="header" class"ui-header">
+            <h1>Do you really wish to delete this appointment?</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <h3>
+                3:00 PM - 5:00 PM <br /><br />
+                <span class="h-normal">Mobile Systems Lecture<br />
+                <em>UvA, Science Park 904, G2.10</em></span><br />
+            </h3>
+            <a href="#appointment2-dialog" data-rel="back">Cancel</a>
+            <a href="#schedule">OK</a>
+        </div>
+      </div>
+
+      <div data-role="page" id="appointment3-dialog" class="ui-page appointment-dialog">
+        <div data-role="content" class"ui-content">
+            <div class="ui-grid-a">
+	           <div class="ui-block-a">
+                   <h3>
+                        7:00 PM - 10:00 PM <br /><br />
+                        <span class="h-normal">Dinner with friends<br />
+                        <em>Home</em></span><br />
+                    </h3>
+                </div>
+	            <div class="ui-block-b">
+                    <span class="icon-edit"></span><br /><br /><br />
+                    <a href="#appointment3-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red"></span></a><br /><br /><br />
+                    <a href="#schedule" data-rel="back" data-icon="delete"><span class="icon-check white"></span></a>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+
+      <div data-role="page" id="appointment3-delete" class="ui-page appointment-dialog appointment-dialog-delete">
+        <div data-role="header" class"ui-header">
+            <h1>Do you really wish to delete this appointment?</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <h3>
+                7:00 PM - 10:00 PM <br /><br />
+                <span class="h-normal">Dinner with friends<br />
+                <em>Home</em></span><br />
+            </h3>
+            <a href="#appointment3-dialog" data-rel="back">Cancel</a>
+            <a href="#schedule">OK</a>
+        </div>
+      </div>
+          
       <div data-role="page" id="" class="ui-page">
         <div data-role="header" class"ui-header">
             <h1>Should-I-Run</h1>
@@ -576,6 +737,6 @@
             
         </div>
       </div>
-      
+    
   </body>
 </html>
