@@ -111,3 +111,10 @@
     -moz-border-radius: 13px;
     border-radius: 13px; 
  }
+[class*="icon-"].bg{
+	background-color:  #fff;
+    color: #2ebda2;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px; 
+}
