@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
     <title>Should I Run?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     <link rel="stylesheet" href="css/jquery.mobile-1.4.0.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/icons.css">
@@ -41,7 +44,9 @@
           });
          $('#main-travel .travel-options ul').roundabout({
             btnNext: ".nav-next",
-            btnPrev: ".nav-prev"
+            btnPrev: ".nav-prev",
+            enableDrag : true,
+            dropDuration: 100
          });
       });
     </script>
@@ -504,29 +509,100 @@
                   <span class="icon-arrow-right"></span>
                   <span class="icon-walking bg"></span>
                 </h3>
-                <p>I'm the collapsible set content for section 1.</p>
+                
+                <div class="fake-table">
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
+                    <div class="fake-table-cell">Tram<br>Stop</div>
+                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
+                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
+                  </div>
+             
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-walking"></span></div>
+                    <div class="fake-table-cell">Walk</div>
+                    <div class="fake-table-cell">4 minutes</div>
+                     <div class="fake-table-cell">1:32 PM</div>
+                  </div>
+               
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-flag"></span></div>
+                    <div class="fake-table-cell">Arrival</div>
+                    <div class="fake-table-cell"></div>
+                     <div class="fake-table-cell">1:36 PM</div>
+                  </div>
+                </div>
+                
               </div>
               
               <div data-role="collapsible">
                  <h3>
-                  1:23 PM - 1:36 PM (13 min)
+                  1:39 PM - 1:56 PM (20 min)
                   <br />
-                  <span class="icon-train bg"></span>
+                  <span class="icon-sprinter bg"></span>
+                  <span class="icon-arrow-right"></span>
+                  <span class="icon-bus bg"></span>
                   <span class="icon-arrow-right"></span>
                   <span class="icon-walking bg"></span>
                 </h3>
-                <p>I'm the collapsible set content for section 1.</p>
+                <div class="fake-table">
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
+                    <div class="fake-table-cell">Tram<br>Stop</div>
+                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
+                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
+                  </div>
+             
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-walking"></span></div>
+                    <div class="fake-table-cell">Walk</div>
+                    <div class="fake-table-cell">4 minutes</div>
+                     <div class="fake-table-cell">1:32 PM</div>
+                  </div>
+               
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-flag"></span></div>
+                    <div class="fake-table-cell">Arrival</div>
+                    <div class="fake-table-cell"></div>
+                     <div class="fake-table-cell">1:36 PM</div>
+                  </div>
+                </div>
               </div>
 
               <div data-role="collapsible">
                  <h3>
-                  1:23 PM - 1:36 PM (13 min)
+                  1:53 PM - 2:06 PM (13 min)
                   <br />
                   <span class="icon-train bg"></span>
                   <span class="icon-arrow-right"></span>
                   <span class="icon-walking bg"></span>
                 </h3>
-                <p>I'm the collapsible set content for section 1.</p>
+                 <div class="fake-table">
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
+                    <div class="fake-table-cell">Tram<br>Stop</div>
+                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
+                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
+                  </div>
+             
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-walking"></span></div>
+                    <div class="fake-table-cell">Walk</div>
+                    <div class="fake-table-cell">4 minutes</div>
+                     <div class="fake-table-cell">1:32 PM</div>
+                  </div>
+               
+                  <div class="fake-table-row">
+                    <div class="fake-table-cell"><span class="icon-flag"></span></div>
+                    <div class="fake-table-cell">Arrival</div>
+                    <div class="fake-table-cell"></div>
+                     <div class="fake-table-cell">1:36 PM</div>
+                  </div>
+                </div>
+              </div>
+
+               <div class="show-more">
+                  <a href="#">Load more options...</a>
               </div>
               
             </div>
