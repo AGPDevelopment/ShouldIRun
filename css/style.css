@@ -605,6 +605,10 @@ h3 .h-normal {
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
+.travel-options .ui-collapsible-heading .select-option{
+    float: right;
+    margin-top: -10px;
+}
 .travel-options .ui-collapsible-set .ui-collapsible-heading{
     -webkit-border-radius: 10px 10px 0 0 ;
     -moz-border-radius: 10px 10px 0 0 ;
@@ -619,6 +623,11 @@ h3 .h-normal {
 .travel-options .ui-icon-minus, .travel-options .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
     background-color: #2ebda2;
     color: #fff;
+}
+.travel-options .ui-icon-minus .select-option [class*="icon-"]{
+    color: #fff;
+    font-size: 34px;
+    transition: font-size 0.2s;
 }
 .travel-options .ui-collapsible-heading-toggle{
     padding: 12px 18px;
