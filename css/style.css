@@ -16,6 +16,24 @@ p{
     margin: 0;
     padding: 0;
 }
+
+.front-link {
+    display: block;
+    width: 48%;
+    height: 100%;
+    text-indent: -9999px;
+    position: absolute;
+    top: 0;
+}
+
+.front-link-preferences {
+    left: 0;   
+}
+
+.front-link-main {
+    right: 0;   
+}
+
 ul{
     list-style: none;
     clear: both;
@@ -48,6 +66,7 @@ ul li{
     width: 100%;
     height: 20px;
     display: block;
+    border: none;
 }
 
 .ui-header h1 {
@@ -135,6 +154,10 @@ div.ui-slider-switch {
 #pref-walking-duration .ui-header,
 #pref-reminder-duration .ui-header{
     height: 50px !important;
+}
+
+#welcome p {
+    padding: 10px 0;   
 }
 
 #welcome a,
@@ -365,7 +388,7 @@ h3 .h-normal {
 
 .appointment-dialog-delete .ui-content a {
     display: block;
-    width: 44%;
+    width: 40%;
     background: #fff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;

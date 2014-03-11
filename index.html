@@ -54,14 +54,11 @@
   </head>
   <body>
     
-      <div data-role="page" id="index" class"ui-page">
-          <div data-role="header" class"ui-header">
-              <h1>Should-I-Run</h1>
-          </div>
-          
+      <div data-role="page" id="index" class"ui-page"> 
           <div data-role="content" class"ui-content">
-                <a href="#welcome">Go to preferences</a>
-                <a href="#main-travel">Go to main</a>
+              <img src="images/logo_AGP.png" width="100%" height="auto">
+                <a class="front-link front-link-preferences" href="#welcome">Go to preferences</a>
+                <a class="front-link front-link-main" href="#main-travel">Go to main</a>
                 <p id="test"></p>
               <script>
                   getWeather(52.365826, 4.905512);
@@ -72,11 +69,6 @@
                   //getFutureLocation();
               </script>
           </div>
-          
-          <div data-role="footer" class"ui-footer">
-          
-          </div>
-        
       </div>
       
       <div data-role="page" id="welcome" class"ui-page pref">
@@ -99,6 +91,7 @@
                  <li><a href="#pref-bike-duration"><img src="images/progress-white.png"></a></li>
                  <li><a href="#pref-walking-duration"><img src="images/progress-white.png"></a></li>
                  <li><a href="#pref-reminder-duration"><img src="images/progress-white.png"></a></li>
+                 <li><a href="#pref-bike">></a></li>
 		      </ul>
 	       </div>
         </div>
@@ -434,8 +427,7 @@
                     <a href="#main-travel-option-one">
                       <span class="icon-public option"></span>
                       <div class="conditions">
-                        <span class="icon-wind red"></span>
-                        <span class="icon-rain red"></span>
+                        
                       </div>
                     </a>
                   </li>
@@ -443,16 +435,17 @@
                     <a href="">
                       <span class="icon-bike option"></span>
                       <div class="conditions">
-                        <span class="icon-sun"></span>
+                        <span class="icon-wind red"></span>
+                        <span class="icon-rain red"></span>
                       </div>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <span class="icon-car option"></span>
+                      <span class="icon-car red option"></span>
                       <div class="conditions">
                         <span class="icon-time red"></span>
-                        <span class="icon-snow red"></span>
+        
                       </div>
                     </a>
                   </li>
@@ -572,7 +565,7 @@
 
               <div data-role="collapsible">
                  <h3>
-                  1:53 PM - 2:06 PM (13 min)
+                  1:53 PM - 2:00 PM (13 min)
                   <br />
                   <span class="icon-train bg"></span>
                   <span class="icon-arrow-right"></span>
@@ -622,8 +615,8 @@
             <div class="schedule-icons">
               <img src="images/agenda-green.png" width="30%">
                   <div class="conditions">
-                    <span class="icon-snow red"></span>
                     <span class="icon-wind red"></span>
+                    <span class="icon-rain red"></span>
                   </div>
             </div>
             <div class="schedule-title">
@@ -643,9 +636,9 @@
                             <img class="appointment-icon" src="images/public-green.png">
                             <br />
                             <br />
-                            1:00 PM - 2:30 PM <br />
-                            <span class="h-normal">Lunch with classmates <span class="pijl">&#9660</span><br />
-                            <em>Polder, Science Park</em>
+                            2:00 PM - 4:00 PM <br />
+                            <span class="h-normal">Mobile Systems Lecture <span class="pijl">&#9660</span><br />
+                            <em>UvA, Science Park 904, G2.10</em>
                             </span>
                         </h3>
                         
@@ -656,9 +649,9 @@
                             <img class="appointment-icon" src="images/foot-green.png">
                             <br />
                             <br />
-                            3:00 PM - 5:00 PM <br />
-                            <span class="h-normal">Mobile Systems Lecture <span class="pijl">&#9660</span><br />
-                            <em>UvA, Science Park 904, G2.10</em>
+                            4:30 PM - 6:00 PM <br />
+                            <span class="h-normal">Meeting with project group <span class="pijl">&#9660</span><br />
+                            <em>Polder, Science Park</em>
                             </span>
                         </h3>
                     </a>
@@ -697,11 +690,11 @@
             <div class="ui-grid-a">
 	           <div class="ui-block-a">
                    <h3>
-                        1:00 PM - 2:30 PM <br /><br />
-                        <span class="h-normal">Lunch with classmates<br />
-                        <em>Polder, Science Park</em></span><br />
+                       2:00 PM - 4:00 PM <br /><br />
+                        <span class="h-normal">Mobile Systems Lecture<br />
+                        <em>UvA, Science Park 904, G2.10</em></span><br />
                         <img class="appointment-transport-icon" src="images/foot-green.png"><br /><br />
-                        > UvA, Science Park 904, G2.10
+                        > Polder, Science Park 
                     </h3>
                 </div>
 	            <div class="ui-block-b">
@@ -720,9 +713,9 @@
         </div>
         <div data-role="content" class"ui-content">
             <h3>
-                1:00 PM - 2:30 PM <br /><br />
-                <span class="h-normal">Lunch with classmates<br />
-                <em>Polder, Science Park</em></span><br />
+                2:00 PM - 4:00 PM <br /><br />
+                <span class="h-normal">Mobile Systems Lecture<br />
+                <em>UvA, Science Park 904, G2.10</em></span><br />
             </h3>
             <a href="#appointment1-dialog" data-rel="back">Cancel</a>
             <a href="#schedule">OK</a>
@@ -734,9 +727,9 @@
             <div class="ui-grid-a">
 	           <div class="ui-block-a">
                    <h3>
-                        3:00 PM - 5:00 PM <br /><br />
-                        <span class="h-normal">Mobile Systems Lecture<br />
-                        <em>UvA, Science Park 904, G2.10</em></span><br />
+                       4:30 PM - 6:00 PM <br /><br />
+                        <span class="h-normal">Meeting with project group<br />
+                        <em>Polder, Science Park</em></span><br />
                         <img class="appointment-transport-icon" src="images/public-green.png"><br /><br />
                         > Home
                     </h3>
@@ -757,9 +750,9 @@
         </div>
         <div data-role="content" class"ui-content">
             <h3>
-                3:00 PM - 5:00 PM <br /><br />
-                <span class="h-normal">Mobile Systems Lecture<br />
-                <em>UvA, Science Park 904, G2.10</em></span><br />
+                4:30 PM - 6:00 PM <br /><br />
+                <span class="h-normal">Meeting with project group<br />
+                <em>Polder, Science Park</em></span><br />
             </h3>
             <a href="#appointment2-dialog" data-rel="back">Cancel</a>
             <a href="#schedule">OK</a>
