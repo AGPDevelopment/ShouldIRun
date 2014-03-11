@@ -501,6 +501,7 @@ h3 .h-normal {
 .travel-options li.roundabout-in-focus span.option{
     font-size: 123px;
     transition: font-size 0.2s;
+    background-color: #fff;
 }
 .travel-options .ui-collapsible-set .show-more{
     padding: 12px;
