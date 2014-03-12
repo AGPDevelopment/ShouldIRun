@@ -442,8 +442,8 @@ h3 .h-normal {
     width: 13px;
     float: left;
 }
-.appointment-title, .appointment-countdown{
-    padding-left: 5px;
+.appointment-title{
+    float: left;
 }
 .appointment-title span, .appointment-countdown span{
     display: block;
@@ -500,6 +500,9 @@ h3 .h-normal {
     text-align: center;
     color:  #2ebda2;
 }
+
+
+
 .appointment-countdown span{
     display: block;
     font-size: 12px;
@@ -525,6 +528,9 @@ h3 .h-normal {
     font-size: 123px;
     transition: font-size 0.2s;
     background-color: #fff;
+}
+.travel-options li.roundabout-in-focus a{
+    display: block;
 }
 .travel-options .ui-collapsible-set .show-more{
     padding: 12px;
@@ -580,20 +586,28 @@ h3 .h-normal {
 }
 .details .appointment-title{
     padding-bottom: 10px;
-    border-bottom: 1px solid #2ebda2;
     margin-bottom: 10px;
     float: left;
 }
 .details .appointment-countdown{
     float: left;
+    width: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #2ebda2;
 }
 .appointment-countdown .countdown{
     padding-top: 10px;
+    font-style: normal;
 }
 .travel-options .ui-collapsible-set{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+}
+.travel-options .ui-collapsible-heading .select-option{
+    float: right;
+    margin-top: -10px;
 }
 .travel-options .ui-collapsible-set .ui-collapsible-heading{
     -webkit-border-radius: 10px 10px 0 0 ;
@@ -609,6 +623,11 @@ h3 .h-normal {
 .travel-options .ui-icon-minus, .travel-options .ui-collapsible-inset.ui-collapsible-themed-content .ui-collapsible-content{
     background-color: #2ebda2;
     color: #fff;
+}
+.travel-options .ui-icon-minus .select-option [class*="icon-"]{
+    color: #fff;
+    font-size: 34px;
+    transition: font-size 0.2s;
 }
 .travel-options .ui-collapsible-heading-toggle{
     padding: 12px 18px;
@@ -633,7 +652,8 @@ h3 .h-normal {
 }
 .fake-table{ display: table; width: 100%; padding-bottom: 10px;}
 .fake-table-row{display: table-row;}
-.fake-table-cell {display: table-cell; padding: 0 0 10px 0; vertical-align: top;text-align: left; padding-left: 3px; border-right: 1px solid #fff;}
+.fake-table-cell {display: table-cell; padding: 0 0 10px 8px; vertical-align: top;text-align: left; border-right: 1px solid #fff;}
+.fake-table-cell:first-child{padding-left: 3px;}
 .fake-table-cell:last-child{border: none; padding-bottom: 0;}
 .fake-table-row div{font-size: 12px;}
 .fake-table-cell [class*="icon-"]{font-size: 25px;}
