@@ -431,7 +431,6 @@
 			var db = window.openDatabase("weer", "1.0", "Weer", 1000000);
 			var wind = localStorage.getItem('wind');
 			var icon = localStorage.getItem('icon');
-			console.log(icon);
 			if(wind < 4.4){
 				$(".conditions").append("<span class=\"icon-wind red\"></span>");
 				console.log("Yes, wel "+wind+" m/s");
@@ -499,7 +498,6 @@
                     <a href="#main-travel-option-four">
                       <span class="icon-walking option grey"></span>
                       <div class="conditions">
-                        <span class="icon-time red"></span>
                       </div>
                     </a>
                   </li>
