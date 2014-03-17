@@ -29,16 +29,3 @@ function getFutureLocation(){
 		// where is home?
 	}*/
 }
-
-function getWeather(lat, long){
-	/*$.ajax({
-	  url: 'http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long,
-	  success: function(data){weer = data;}
-	});*/
-	var test = 10;
-	$.getJSON('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+long+'&units=metric',
-					 function(data){
-						 	var dataToStore = JSON.stringify(data);
-						 	localStorage.setItem('weer', dataToStore);
-						 });
-}
