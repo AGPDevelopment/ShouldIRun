@@ -409,9 +409,9 @@
 
       <!-- main screen tevel options -->
       <div data-role="page" id="main-travel" class="ui-page">
-      	<script>
+      	<!--<script>
 			var timer = true;
-			var datum = new Date(2014,2,18,13,00);
+			var datum = new Date(2014,2,18,14,20);
 			var timerId =
 			  countdown(
 				function(ts) {
@@ -445,7 +445,7 @@
 			}
 			// later on this timer may be stopped
 			//window.clearInterval(timerId);
-		</script>
+		</script>-->
         <div class="main-header">
             <span class="placeholder"></span>
             <div class="appointment-title">
@@ -476,6 +476,8 @@
                     <a href="#main-travel-option-two">
                       <span class="icon-bike option"></span>
                       <div class="conditions">
+					  <span class="icon-rain red"></span>
+					  <span class="icon-wind red"></span>
                       </div>
                     </a>
                   </li>
@@ -487,17 +489,20 @@
                     <a href="#main-travel-option-three">
                       <span class="icon-car red option"></span>
                       <div class="conditions">
+					  <span class="icon-time red"></span>
                       </div>
                     </a>
                   </li>
                   <li>
                      <div class="appointment-countdown">
-                     <span>Time remaining</span>
-                     <span class="countdown red">00 : 01</span>
+                     <span></span>
+                     <span class="countdown grey">Too far away</span>
                     </div>
                     <a href="#main-travel-option-four">
                       <span class="icon-walking option grey"></span>
                       <div class="conditions">
+					  <span class="icon-rain grey"></span>
+					  <span class="icon-wind grey"></span>
                       </div>
                     </a>
                   </li>
@@ -509,7 +514,7 @@
             <ul class="travel-nav">
               <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="" class="ui-btn-active active"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href=""><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#reminder-alert" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -654,7 +659,7 @@
             <ul class="travel-nav">
               <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href=""><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -803,7 +808,7 @@
             <ul class="travel-nav">
               <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href=""><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -950,7 +955,7 @@
             <ul class="travel-nav">
               <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href=""><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -1099,7 +1104,7 @@
             <ul class="travel-nav">
               <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href=""><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -1173,7 +1178,50 @@
             <ul class="travel-nav">
               <li><a href="" class="ui-btn-active active"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href=""><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
+            </ul>
+        </div>
+      </div>
+	 
+<!-- Add Appointment - NEEDS WORK! -->	 
+	 <div data-role="page" id="add-appointment" class="ui-page">
+        <div class="main-header">
+            <div class="schedule-icons">
+              <img src="images/agenda-green.png" width="30%">
+            </div>
+            <div class="schedule-title">
+                <span class="title">Add Appointment</span>            
+            </div>
+            <a href="#preferences" data-transition="slidedown" class="preferences-menu"><img class="preferences-icon" src="images/preferences.png"></a>
+        </div>
+        <div data-role="content" class"ui-content">
+             <div class="travel-options appointments">
+            
+                <div data-role="collapsible-set" class="bg-grey">
+                    
+                    <a href="#appointment1-dialog" data-rel="dialog" data-transition="pop" data-corners="true" data-shadow="true" data-iconshadow="true" data-theme="c" class="appointment">
+                        
+                        <h3>
+                            <img class="appointment-icon" src="images/public-green.png">
+                            <br />
+                            <br />
+                            2:00 PM - 4:00 PM <br />
+                            <span class="h-normal">Mobile Systems Lecture <span class="pijl">&#9660</span><br />
+                            <em>UvA, Science Park 904, G2.10</em>
+                            </span>
+                        </h3>
+                        
+                    </a>
+                
+              
+                 </div>
+            </div>
+        </div>
+        <div data-role="navbar" class="main-footer">
+            <ul class="travel-nav">
+              <li><a href="" class="ui-btn-active active"><span class="icon-agenda"><em>Schedule</em></span></a></li>
+              <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
+              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -1213,6 +1261,18 @@
             </h3>
             <a href="#appointment1-dialog" data-rel="back">Cancel</a>
             <a href="#schedule">OK</a>
+        </div>
+      </div>
+	  
+	  <div data-role="page" id="reminder-alert" class="ui-page appointment-dialog appointment-dialog-delete">
+        <div data-role="header" class"ui-header">
+            <h1>Time to go!</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <h3>
+                You have ten minutes left to get ready.
+            </h3>
+            <a href="#" data-rel="back">OK</a>
         </div>
       </div>
 
