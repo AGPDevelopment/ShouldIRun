@@ -510,11 +510,12 @@
                 <a href="#" class="nav-next"><span class="icon-arrow-right"></span></a>
              </div>
         </div>
+
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
               <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="" class="ui-btn-active active"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href="#reminder-alert" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -650,10 +651,14 @@
               </div>
 
                <div class="show-more">
-                  <a href="#">Load more options...</a>
+                  <a href="#reminder-alert" data-rel="dialog" data-transition="pop">Load more options...</a>
               </div>
-              
             </div>
+
+            <div> <a href="#reminder-alert" data-rel="dialog" data-transition="pop" style="width: 50px;height: 50px;display: inline-block;
+color: #edefee;">.</a></div>
+            <div> <a href="#too-late-alert" data-rel="dialog" data-transition="pop" style="width: 50px;height: 50px;display: inline-block;
+color: #edefee;">.</a></div>
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
@@ -686,123 +691,7 @@
         </div>
         <div class="travel-options">
             
-             <div data-role="collapsible-set" class="bg-grey">
-
-              <div data-role="collapsible">
-                <h3>
-                  1:23 PM - 1:36 PM (13 min)
-                  <br />
-                  <span class="icon-train bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-
-                
-                <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-             
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:32 PM</div>
-                  </div>
-               
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-                
-              </div>
-              
-              <div data-role="collapsible">
-                 <h3>
-                  1:39 PM - 1:56 PM (20 min)
-                  <br />
-                  <span class="icon-sprinter bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-bus bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-                <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-sprinter bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-             
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-bus bg"></span></div>
-                    <div class="fake-table-cell">Bus 40</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:32 PM</div>
-                  </div>
-               
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:40 PM</div>
-                  </div>
-
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-role="collapsible">
-                 <h3>
-                  1:53 PM - 2:00 PM (13 min)
-                  <br />
-                  <span class="icon-train bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-                 <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-               
-                 <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:40 PM</div>
-                  </div>
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-              </div>
-
-               <div class="show-more">
-                  <a href="#">Load more options...</a>
-              </div>
-              
-            </div>
+     
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
@@ -834,122 +723,6 @@
         </div>
         <div class="travel-options">
             
-             <div data-role="collapsible-set" class="bg-grey">
-
-              <div data-role="collapsible">
-                <h3>
-                  1:23 PM - 1:36 PM (13 min)
-                  <br />
-                  <span class="icon-train bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-
-                
-               <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-             
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:32 PM</div>
-                  </div>
-               
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-                
-              </div>
-              
-              <div data-role="collapsible">
-                 <h3>
-                  1:39 PM - 1:56 PM (20 min)
-                  <br />
-                  <span class="icon-sprinter bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-bus bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-                <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-sprinter bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-             
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-bus bg"></span></div>
-                    <div class="fake-table-cell">Bus 40</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:32 PM</div>
-                  </div>
-               
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:40 PM</div>
-                  </div>
-
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-role="collapsible">
-                 <h3>
-                  1:53 PM - 2:00 PM (13 min)
-                  <br />
-                  <span class="icon-train bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-                 <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-               
-                 <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:40 PM</div>
-                  </div>
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-              </div>
-               <div class="show-more">
-                  <a href="#">Load more options...</a>
-              </div>
-              
-            </div>
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
@@ -982,123 +755,6 @@
         </div>
         <div class="travel-options">
             
-             <div data-role="collapsible-set" class="bg-grey">
-
-              <div data-role="collapsible">
-                <h3>
-                  1:23 PM - 1:36 PM (13 min)
-                  <br />
-                  <span class="icon-train bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-
-                
-               <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-             
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:32 PM</div>
-                  </div>
-               
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-                
-              </div>
-              
-              <div data-role="collapsible">
-                 <h3>
-                  1:39 PM - 1:56 PM (20 min)
-                  <br />
-                  <span class="icon-sprinter bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-bus bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-                <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-sprinter bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-             
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-bus bg"></span></div>
-                    <div class="fake-table-cell">Bus 40</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:32 PM</div>
-                  </div>
-               
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:40 PM</div>
-                  </div>
-
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-role="collapsible">
-                 <h3>
-                  1:53 PM - 2:00 PM (13 min)
-                  <br />
-                  <span class="icon-train bg"></span>
-                  <span class="icon-arrow-right"></span>
-                  <span class="icon-walking bg"></span>
-                  <a href="" class="select-option"><span class="icon-check grey"></span></a>
-                </h3>
-                 <div class="fake-table">
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-tram bg"></span></div>
-                    <div class="fake-table-cell">Tram<br>Stop</div>
-                    <div class="fake-table-cell">14 Flevopark<br>Muiderpoort<br>Station</div>
-                     <div class="fake-table-cell">1:23 PM<br>1:30 PM</div>
-                  </div>
-               
-                 <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-walking bg"></span></div>
-                    <div class="fake-table-cell">Walk</div>
-                    <div class="fake-table-cell">4 minutes</div>
-                     <div class="fake-table-cell">1:40 PM</div>
-                  </div>
-                  <div class="fake-table-row">
-                    <div class="fake-table-cell"><span class="icon-flag bg"></span></div>
-                    <div class="fake-table-cell">Arrival</div>
-                    <div class="fake-table-cell"></div>
-                     <div class="fake-table-cell">1:36 PM</div>
-                  </div>
-                </div>
-              </div>
-
-               <div class="show-more">
-                  <a href="#">Load more options...</a>
-              </div>
-              
-            </div>
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
@@ -1184,14 +840,16 @@
       </div>
 	 
 <!-- Add Appointment - NEEDS WORK! -->	 
-	 <div data-role="page" id="add-appointment" class="ui-page">
+	 <div data-role="page" id="add-appointment" class="ui-page details">
         <div class="main-header">
-            <div class="schedule-icons">
-              <img src="images/agenda-green.png" width="30%">
+            <div class="travel-option-details">
+              <span class="icon-location option"></span>
             </div>
-            <div class="schedule-title">
-                <span class="title">Add Appointment</span>            
+            <div class="appointment-title">
+                <span>Add New Appointment</span>
+               
             </div>
+            
             <a href="#preferences" data-transition="slidedown" class="preferences-menu"><img class="preferences-icon" src="images/preferences.png"></a>
         </div>
         <div data-role="content" class"ui-content">
@@ -1199,29 +857,30 @@
             
                 <div data-role="collapsible-set" class="bg-grey">
                     
-                    <a href="#appointment1-dialog" data-rel="dialog" data-transition="pop" data-corners="true" data-shadow="true" data-iconshadow="true" data-theme="c" class="appointment">
+                    <a data-corners="true" data-shadow="true" data-iconshadow="true" data-theme="c" class="appointment">
                         
-                        <h3>
-                            <img class="appointment-icon" src="images/public-green.png">
-                            <br />
-                            <br />
-                            2:00 PM - 4:00 PM <br />
-                            <span class="h-normal">Mobile Systems Lecture <span class="pijl">&#9660</span><br />
-                            <em>UvA, Science Park 904, G2.10</em>
-                            </span>
-                        </h3>
-                        
+                        <div>
+                            __:__ __ - __:__ __
+                            <br><br>
+                            <span>Appointment</span>
+                            <br>
+                            <em>Location</em>
+                           
+                        </div>
+                        <span class="icon-edit"></span>
                     </a>
                 
               
                  </div>
+                 <div style="text-align: left;font-size: 13px;">+ Add more</div>
             </div>
+
         </div>
         <div data-role="navbar" class="main-footer">
             <ul class="travel-nav">
-              <li><a href="" class="ui-btn-active active"><span class="icon-agenda"><em>Schedule</em></span></a></li>
+              <li><a href="#schedule"><span class="icon-agenda"><em>Schedule</em></span></a></li>
               <li><a href="#main-travel"><span class="icon-public"><em>Transport</em></span></a></li>
-              <li><a href="#add-appointment" data-rel="dialog" data-transition="pop"><span class="icon-location"><em>Add appointment</em></span></a></li>
+              <li><a href="#add-appointment" class="ui-btn-active active"><span class="icon-location"><em>Add appointment</em></span></a></li>
             </ul>
         </div>
       </div>
@@ -1241,7 +900,7 @@
                 </div>
 	            <div class="ui-block-b">
                     <span class="icon-edit"></span><br /><br /><br />
-                    <a href="#appointment1-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red"></span></a><br /><br /><br />
+                    <a href="#appointment1-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red bg"></span></a><br /><br /><br />
                     <a href="#schedule" data-rel="back" data-icon="delete"><span class="icon-check white"></span></a>
                 </div>
             </div>
@@ -1275,7 +934,17 @@
             <a href="#" data-rel="back">OK</a>
         </div>
       </div>
-
+    <div data-role="page" id="too-late-alert" class="ui-page appointment-dialog appointment-dialog-delete">
+        <div data-role="header" class"ui-header">
+            <h1>Your are too late for the train...</h1>
+        </div>
+        <div data-role="content" class"ui-content">
+            <h3>
+                Better take the bike to be in time!
+            </h3>
+            <a href="#" data-rel="back">Choose other option</a>
+        </div>
+      </div>
       <div data-role="page" id="appointment2-dialog" class="ui-page appointment-dialog">
         <div data-role="content" class"ui-content">
             <div class="ui-grid-a">
@@ -1290,7 +959,7 @@
                 </div>
 	            <div class="ui-block-b">
                     <span class="icon-edit"></span><br /><br /><br />
-                    <a href="#appointment2-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red"></span></a><br /><br /><br />
+                    <a href="#appointment2-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red bg"></span></a><br /><br /><br />
                     <a href="#schedule" data-rel="back" data-icon="delete"><span class="icon-check white"></span></a>
                 </div>
             </div>
@@ -1325,7 +994,7 @@
                 </div>
 	            <div class="ui-block-b">
                     <span class="icon-edit"></span><br /><br /><br />
-                    <a href="#appointment3-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red"></span></a><br /><br /><br />
+                    <a href="#appointment3-delete" data-rel="dialog" data-transition="pop"><span class="icon-delete red bg"></span></a><br /><br /><br />
                     <a href="#schedule" data-rel="back" data-icon="delete"><span class="icon-check white"></span></a>
                 </div>
             </div>

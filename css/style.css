@@ -33,6 +33,9 @@ p{
 .front-link-main {
     right: 0;   
 }
+.ui-page{
+    position: relative;
+}
 
 ul{
     list-style: none;
@@ -414,9 +417,14 @@ h3 .h-normal {
 
 .appointment-dialog .ui-block-b span {
     float: right;
-    padding: 5px;
+    margin: 5px;
 }
-
+.appointment-dialog .ui-block-b span.bg{
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    color: #ec5c52;
+}
 .appointment-dialog .ui-block-a {
     width: 80% !important;   
 }
@@ -588,7 +596,7 @@ h3 .h-normal {
     text-align: center;
     float: left;
 }
-#main-travel-option-one,#main-travel-option-two,#main-travel-option-three,#main-travel-option-four{
+#main-travel-option-one,#main-travel-option-two,#main-travel-option-three,#main-travel-option-four, #add-appointment{
     margin-top: 14px;
 }
 .travel-option-details .option{
@@ -672,3 +680,20 @@ h3 .h-normal {
 .fake-table-cell:last-child{border: none; padding-bottom: 0;}
 .fake-table-row div{font-size: 12px;}
 .fake-table-cell [class*="icon-"]{font-size: 25px;}
+
+#add-appointment .ui-collapsible-set{
+    padding: 10px 16px;
+}
+#add-appointment a.appointment{
+    clear: both;
+    display: block;
+    height: 66px;
+}
+#add-appointment a.appointment div{
+    float: left;
+}
+#add-appointment a.appointment span.icon-edit{
+    float: right;
+    font-size: 48px;
+    margin-top: 7px;
+}
